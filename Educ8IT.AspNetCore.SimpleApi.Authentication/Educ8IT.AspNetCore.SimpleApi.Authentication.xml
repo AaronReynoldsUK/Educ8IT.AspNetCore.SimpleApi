@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Educ8IT.AspNetCore.SimpleApi.Authentication</name>
+    </assembly>
+    <members>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults.AuthorisationHeaderName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults.AuthenticationScheme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults.TokenTTL">
+            <summary>
+            Default TTL for a Bearer Token.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults.LoginPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults.LogoutPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.OnValidatePrincipal">
+            <summary>
+            A delegate assigned to this property will be invoked when the related method is called.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.OnSigningIn">
+            <summary>
+            A delegate assigned to this property will be invoked when the related method is called.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.OnSignedIn">
+            <summary>
+            A delegate assigned to this property will be invoked when the related method is called.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.OnSigningOut">
+            <summary>
+            A delegate assigned to this property will be invoked when the related method is called.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.ValidatePrincipal(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerValidatePrincipleContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.SigningIn(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningInContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.SignedIn(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSignedInContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.SigningOut(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningOutContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock,Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="logger"></param>
+            <param name="encoder"></param>
+            <param name="clock"></param>
+            <param name="identityManagerService"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.Events">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.CreateEventsAsync">
+            <summary>
+            Creates a new instance of the events instance.
+            </summary>
+            <returns>A new instance of the events instance.</returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.HandleAuthenticateAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.HandleSignInAsync(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.HandleSignOutAsync(Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            
+            </summary>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.ExcludeFromAuthentication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.TokenTTL">
+            <summary>
+            TTL for a Bearer Token.
+            Default is 86400s = 1 day
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.LoginPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.LogoutPath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions.Events">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationPostConfigureOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationPostConfigureOptions.PostConfigure(System.String,Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService},Microsoft.AspNetCore.Authentication.IAuthenticationHandlerProvider,Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="handlers"></param>
+            <param name="identityManagerService"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.AuthenticateAsync(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.ChallengeAsync(Microsoft.AspNetCore.Http.HttpContext,System.String,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            This will instruct your browser on where to go to be authenticated. 
+            For example redirection to the Auth endpoint.
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.ForbidAsync(Microsoft.AspNetCore.Http.HttpContext,System.String,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.SignInAsync(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            This step takes the ClaimsPrincipal built from the previous step, and persists it.
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="principal"></param>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationService.SignOutAsync(Microsoft.AspNetCore.Http.HttpContext,System.String,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            This is the reverse step of the SignIn step. 
+            It instructs the middleware to delete any persisted data.
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="properties"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSignedInContext">
+            <summary>
+            Context object passed to the IBearerAuthenticationEvents method SignedIn. ?????
+            </summary>    
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSignedInContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Authentication.AuthenticationScheme,System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="principal"></param>
+            <param name="properties"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningInContext">
+            <summary>
+            Context object passed to the <see cref="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.SigningIn(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningInContext)"/>.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningInContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Authentication.AuthenticationScheme,Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions,System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="options"></param>
+            <param name="principal"></param>
+            <param name="properties"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningOutContext">
+            <summary>
+            Context object passed to the <see cref="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationEvents.SigningOut(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningOutContext)"/>
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSigningOutContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Authentication.AuthenticationScheme,Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions,Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="options"></param>
+            <param name="properties"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerValidatePrincipleContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerValidatePrincipleContext.#ctor(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Authentication.AuthenticationScheme,Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions,Microsoft.AspNetCore.Authentication.AuthenticationTicket)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="options"></param>
+            <param name="ticket"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerValidatePrincipleContext.ReplacePrincipal(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Called to replace the claims principal. The supplied principal will replace the value of the 
+            Principal property, which determines the identity of the authenticated request.
+            </summary>
+            <param name="principal">The <see cref="T:System.Security.Claims.ClaimsPrincipal"/> used as the replacement</param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerValidatePrincipleContext.RejectPrincipal">
+            <summary>
+            Called to reject the incoming principal. This may be done if the application has determined the
+            account is no longer active, and the request should be treated as if it was anonymous.
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.IBearerAuthenticationService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.NewToken(System.Guid,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="userName"></param>
+            <param name="keyValuePairs"></param>
+            <param name="ttl"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.ValidFromDT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.ExpiresDT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.KeyValuePairs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiBearerToken.BearerToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenRequest">
+            <summary>
+            OAuth authentication request
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenRequest.GrantType">
+            <summary>
+            Must be "password"
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenRequest.UserName">
+            <summary>
+            As supplied by AYOM
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenRequest.Password">
+            <summary>
+            As supplied by AYOM
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure">
+            <summary>
+            Returned when authentication isn't successful, token expires, invalid token used etc. 
+            Should be in JSON but will return in the expected format (determined from "format" querystring parameter or Accept Header or request content type). 
+            Refer to https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/ for further details.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error">
+            <summary>
+            specific error type
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.ErrorDescription">
+            <summary>
+            Circumstance of the error
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.ErrorUri">
+            <summary>
+            Optional Uri to Help Documentation
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.HttpErrorCode">
+            <summary>
+            Error-specific HTTP response code
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_InvalidRequest">
+            <summary>
+            The request is missing a parameter so the server can’t proceed with the request. 
+            This may also be returned if the request includes an unsupported parameter or repeats a parameter.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_InvalidClient">
+            <summary>
+            Client authentication failed, such as if the request contains an invalid client ID or secret. 
+            Send an HTTP 401 response in this case.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_InvalidGrant">
+            <summary>
+            The authorization code (or user’s password for the password grant type) is invalid or expired. 
+            This is also the error you would return if the redirect URL given in the authorization grant does not match the URL provided in this access token request.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_InvalidScope">
+            <summary>
+            For access token requests that include a scope (password or client_credentials grants), this error indicates an invalid scope value in the request.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_UnauthorisedClient">
+            <summary>
+            This client is not authorized to use the requested grant type. 
+            For example, if you restrict which applications can use the Implicit grant, you would return this error for the other apps.
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Failure.Error_UnsupportedGrantType">
+            <summary>
+            If a grant type is requested that the authorization server doesn’t recognize, use this code. 
+            Note that unknown grant types also use this specific error code rather than using the invalid_request above.
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success">
+            <summary>
+            Returned when initial authentication is successful. 
+            Always returns JSON. 
+            Refer to https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/ for further details.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.AccessToken">
+            <summary>
+            The bearer token needed to access the full API
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.TokenType">
+            <summary>
+            Always returns "bearer"
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.ExpiredInS">
+            <summary>
+            TTL in seconds for this token
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.ValidFromDT">
+            <summary>
+            Issue date/time for this token
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.Issued">
+            <summary>
+            Issue date/time for this token
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.ExpiryDT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.Model.ApiTokenResponse_Success.Expires">
+            <summary>
+            Expiry date/time for this token
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerAuthenticationExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerAuthenticationExtensions.AddBearer``1(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TAuthService"></typeparam>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerAuthenticationExtensions.AddBearer``1(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TAuthService"></typeparam>
+            <param name="builder"></param>
+            <param name="authenticationScheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerAuthenticationExtensions.AddBearer``1(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TAuthService"></typeparam>
+            <param name="builder"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerAuthenticationExtensions.AddBearer``1(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TAuthService"></typeparam>
+            <param name="builder"></param>
+            <param name="authenticationScheme"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.IApiMapperOptionsExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.IApiMapperOptionsExtensions.AddAuthenticationDocumentation(Educ8IT.AspNetCore.SimpleApi.IApiMapperOptions)">
+            <summary>
+            
+            </summary>
+            <param name="apiMapperOptions"></param>
+        </member>
+    </members>
+</doc>

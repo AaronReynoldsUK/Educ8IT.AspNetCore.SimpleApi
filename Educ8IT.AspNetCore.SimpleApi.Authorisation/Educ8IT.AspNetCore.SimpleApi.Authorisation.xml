@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Educ8IT.AspNetCore.SimpleApi.Authorisation</name>
+    </assembly>
+    <members>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.ApiDescriptions.AuthorisationAwareApiDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.ApiDescriptions.AuthorisationAwareApiDescription.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions})">
+            <summary>
+            
+            </summary>
+            <param name="apiMapperOptions"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.ApiDescriptions.AuthorisationAwareApiDescription.InitialiseController(System.Type)">
+            <summary>
+            Initialise AuthorisationAwareApiControllerItem from controller type
+            </summary>
+            <param name="controllerType">Controller class type</param>
+            <returns>An AuthorisationAwareApiControllerItem object</returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.#ctor">
+            <summary>
+            Use default Authorisation policy
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.Policies">
+            <summary>
+            Authorisation relies upon passing these Authorisation policies
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.RequiredRoles">
+            <summary>
+            User must be a member of all these roles
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.Roles">
+            <summary>
+            User must be a member of at least one of these roles
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.RequiredRoleAuthorisation">
+            <summary>
+            Indicates if any Role requirements have been added
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.CombineWith(Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute)">
+            <summary>
+            Combine multiple Authorise Attributes
+            </summary>
+            <param name="authoriseAttribute"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes.AuthoriseAttribute.CombineWith(Microsoft.AspNetCore.Authorization.AuthorizeAttribute)">
+            <summary>
+            Combine an Authorize Attribute into this Authorise Attribute
+            </summary>
+            <param name="authorizeAttribute"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerGeneric`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TRequirement"></typeparam>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerGeneric`1.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,`0)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeAuthenticatedRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeAuthenticatedRequirement.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthenticatedRequirement)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeEndpointRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeEndpointRequirement.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Educ8IT.AspNetCore.SimpleApi.Authorisation.EndpointRequirement)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeRoleRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationHandlerOfTypeRoleRequirement.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Educ8IT.AspNetCore.SimpleApi.Authorisation.RoleRequirement)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="requirement"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationAwareApiMapperServiceExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationAwareApiMapperServiceExtensions.IsAuthenticated(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationAwareApiMapperServiceExtensions.AuthorisationCheck(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiMethodItem)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="methodItem"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationOptions.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.IApiMapperOptionsExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.IApiMapperOptionsExtensions.AddAuthorisationDocumentation(Educ8IT.AspNetCore.SimpleApi.IApiMapperOptions)">
+            <summary>
+            
+            </summary>
+            <param name="apiMapperOptions"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.AuthenticatedPolicyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.AuthenticatedPolicy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.RolePolicyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.RolePolicy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.EndpointPolicyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.DefaultAuthorisationPolicies.EndpointPolicy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthenticatedRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.EndpointRequirement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.RoleRequirement">
+            <summary>
+            With the requirement, the Principle is checked for roles membership
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationService.#ctor(Microsoft.AspNetCore.Authorization.IAuthorizationEvaluator,Microsoft.AspNetCore.Authorization.IAuthorizationPolicyProvider,Microsoft.AspNetCore.Authorization.IAuthorizationHandlerProvider,Microsoft.AspNetCore.Authorization.IAuthorizationHandlerContextFactory,Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationService})">
+            <summary>
+            
+            </summary>
+            <param name="evaluator"></param>
+            <param name="policyProvider"></param>
+            <param name="handlers"></param>
+            <param name="authorizationHandlerContextFactory"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationService.AuthorizeAsync(System.Security.Claims.ClaimsPrincipal,System.Object,System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Authorization.IAuthorizationRequirement})">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="resource"></param>
+            <param name="requirements"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.AuthorisationService.AuthorizeAsync(System.Security.Claims.ClaimsPrincipal,System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <param name="resource"></param>
+            <param name="policyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.IAuthorisationService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem.#ctor(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="controller"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem.AuthoriseAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem.Methods">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiControllerItem.GetMethods">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiMethodItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiMethodItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiMethodItem.#ctor(System.Reflection.MethodInfo,Educ8IT.AspNetCore.SimpleApi.TypeDescriptions.IApiControllerItem)">
+            <summary>
+            
+            </summary>
+            <param name="methodInfo"></param>
+            <param name="apiControllerItem"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions.AuthorisationAwareApiMethodItem.AuthoriseAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Filters.AuthorisationFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Filters.AuthorisationFilter.PreExecution(Educ8IT.AspNetCore.SimpleApi.EndpointContext)">
+            <summary>
+            
+            </summary>
+            <param name="endpointContext"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Educ8IT.AspNetCore.Identity</name>
+    </assembly>
+    <members>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.LockoutAfterNFailedAttempts">
+            <summary>
+            Limit the number of failed attempts to Authenticate.
+            A value of 0 indicates no lock-outs to be enforced.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.LockoutFor">
+            <summary>
+            The period to lockout an account.
+            The default is 900s = 15 minutes.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.GeneratedPasswordLength">
+            <summary>
+            Specify the length when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.GeneratedPasswordsIncludeLowerCase">
+            <summary>
+            Include lower-case letters when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.GeneratedPasswordsIncludeNumbers">
+            <summary>
+            Include numbers when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.GeneratedPasswordsIncludeSymbols">
+            <summary>
+            Include symbols when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions.GeneratedPasswordsIncludeUpperCase">
+            <summary>
+            Include upper-case letters when generating new random passwords
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.#ctor(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IdentityDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="loggerFactory"></param>
+            <param name="options"></param>
+            <param name="identityDbContext"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.HasDbContext">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.GetUserByNameAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.IsValidPasswordAsync(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.CanSignIn(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.RecordFailedAuthentication(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.ResetFailedAuthentication(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.GenerateNewPassword">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.UpdatePasswordHash(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.StoreToken(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.RemoveToken(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.RemoveExpiredTokens">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.AuthenticateTokenAsync(System.String,System.String,System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerService.RegisterAsync(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerServiceExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IdentityManagerServiceExtensions.AddIdentityManager(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions})">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="setupAction"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions">
+            <summary>
+            Options object for the IdentityManager
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.LockoutAfterNFailedAttempts">
+            <summary>
+            Limit the number of failed attempts to Authenticate.
+            A value of 0 indicates no lock-outs to be enforced.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.LockoutFor">
+            <summary>
+            The period to lockout an account
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.GeneratedPasswordLength">
+            <summary>
+            Specify the length when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.GeneratedPasswordsIncludeLowerCase">
+            <summary>
+            Include lower-case letters when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.GeneratedPasswordsIncludeNumbers">
+            <summary>
+            Include numbers when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.GeneratedPasswordsIncludeSymbols">
+            <summary>
+            Include symbols when generating new random passwords
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerOptions.GeneratedPasswordsIncludeUpperCase">
+            <summary>
+            Include upper-case letters when generating new random passwords
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.HasDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.GetUserByNameAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.IsValidPasswordAsync(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiUser"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.CanSignIn(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <summary>
+            
+            </summary>
+            <param name="apiUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.RecordFailedAuthentication(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <summary>
+            
+            </summary>
+            <param name="apiUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.ResetFailedAuthentication(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser)">
+            <summary>
+            
+            </summary>
+            <param name="apiUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.GenerateNewPassword">
+            <summary>
+            Generates a new random password using the Options specified in the setup action on IdentityManager
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.UpdatePasswordHash(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.String)">
+            <summary>
+            This will generate a new password hash for the supplied password. 
+            Use GenerateNewPassword() to get a new random password.
+            The hashed password is updated on the ApiUser object and saved to the data store.
+            The hash password is returned.
+            </summary>
+            <param name="apiUser">The ApiUser which will be updated with the new hashed password</param>
+            <param name="password">The password to HASH.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.StoreToken(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken)">
+            <summary>
+            
+            </summary>
+            <param name="apiUserToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.RemoveToken(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="token"></param>
+            <param name="tokenType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.RemoveExpiredTokens">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.AuthenticateTokenAsync(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="token">The authentication token provided</param>
+            <param name="scheme">e.g. Bearer</param>
+            <param name="refreshUsingTTL">If supplied, the service will extend the token lifespan using this provided value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService.RegisterAsync(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="registerRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim.ClaimType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim.ClaimValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRole.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRole.RoleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRole.LinkedClaims">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRoleClaimLink">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRoleClaimLink.RoleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRoleClaimLink.Role">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRoleClaimLink.ClaimId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiRoleClaimLink.Claim">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.EmailAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.EmailAddressConfirmationToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.EmailAddressIsConfirmed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.PasswordHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.TwoFactorAuthenticationMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.TwoFactorAuthenticationParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.AccessFailedAttemptsTotal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.AccessFailedAttemptsCurrent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.LockoutUntil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.Enabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.LinkedRoles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.LinkedClaims">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.UserTokens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.IsLockedOut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.LockOutExpired">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.ApiClaims">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.Claims">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser.RolesAsClaims">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserClaimLink">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserClaimLink.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserClaimLink.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserClaimLink.ClaimId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserClaimLink.Claim">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserRoleLink">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserRoleLink.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserRoleLink.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserRoleLink.RoleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserRoleLink.Role">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.TokenType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.ValidFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken.ValidUntil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Identity.Passwords">
+            <summary>
+            Utility Class for passwords
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.Passwords.GeneratePassword(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Generate a random password of at least 8 characters
+            </summary>
+            <param name="length"></param>
+            <param name="includeLowerCase"></param>
+            <param name="includeNumbers"></param>
+            <param name="includeSymbols"></param>
+            <param name="includeUpperCase"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Identity.Passwords.Jumble(System.String)">
+            <summary>
+            Jumble the characters in a string
+            </summary>
+            <param name="stringToJumble"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Educ8IT.AspNetCore.SimpleApi.Authorisation.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AuthorisationAwareApiMapperService.cs" />
+    <Compile Remove="AuthorisationAwareApiMapperServiceCollectionExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Educ8IT.AspNetCore.Identity\Educ8IT.AspNetCore.Identity.csproj" />
+    <ProjectReference Include="..\Educ8IT.AspNetCore.SimpleApi.Authentication\Educ8IT.AspNetCore.SimpleApi.Authentication.csproj" />
+    <ProjectReference Include="..\Educ8IT.AspNetCore.SimpleApi\Educ8IT.AspNetCore.SimpleApi.csproj" />
+  </ItemGroup>
+
+</Project>

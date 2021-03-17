@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation</name>
+    </assembly>
+    <members>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController.#ctor(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController},Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions})">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <param name="iLogger"></param>
+            <param name="apiMapperService"></param>
+            <param name="apiMapperOptions"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController.GetApiDocumentation(System.String)">
+            <summary>
+            Gets the Controllers and Methods for this API
+            </summary>
+            <param name="apiVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController.GetApiDocumentationForController(System.String,System.String)">
+            <summary>
+            Gets the documentation for a Controller and the Methods/Actions defined on it
+            </summary>
+            <param name="ControllerName"></param>
+            <param name="apiVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController.GetApiDocumentationForControllerMethod(System.String,System.String,System.String)">
+            <summary>
+            Get documentation for a Method/Action
+            </summary>
+            <param name="ControllerName"></param>
+            <param name="MethodName"></param>
+            <param name="apiVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Controllers.ApiHtmlDocumentationController.GetApiDocumentationForType(System.String)">
+            <summary>
+            Get documentation for a Type
+            </summary>
+            <param name="TypeName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.DocumentationControllerRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.DocumentationHomeRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.DocumentationByControllerRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.DocumentationByMethodRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationDefaults.DocumentationTypeRoute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationHelper.GetRootUri(Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IHtmlDocumentationOptions)">
+            <summary>
+            
+            </summary>
+            <param name="htmlDocumentationOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationHelper.GetContollerUri(Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IHtmlDocumentationOptions,Educ8IT.AspNetCore.SimpleApi.TypeDescriptions.IApiControllerItem)">
+            <summary>
+            
+            </summary>
+            <param name="htmlDocumentationOptions"></param>
+            <param name="apiControllerItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationHelper.GetMethodUri(Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IHtmlDocumentationOptions,Educ8IT.AspNetCore.SimpleApi.TypeDescriptions.IApiMethodItem)">
+            <summary>
+            Gets the URI for the documentation for a specified method
+            </summary>
+            <param name="htmlDocumentationOptions"></param>
+            <param name="apiMethodItem"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationHelper.GetTypeUri(Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IHtmlDocumentationOptions,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="htmlDocumentationOptions"></param>
+            <param name="typeName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationServiceCollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationServiceCollectionExtensions.AddHtmlDocumentation(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IHtmlDocumentationOptions})">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="setupAction"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IApiMapperOptionsExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.IApiMapperOptionsExtensions.AddHtmlDocumentation(Educ8IT.AspNetCore.SimpleApi.IApiMapperOptions)">
+            <summary>
+            
+            </summary>
+            <param name="apiMapperOptions"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.BrandName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.BrankLink">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.CopyrightNotice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.DocumentationControllerRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.DocumentationHomeRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.DocumentationByControllerRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.DocumentationByMethodRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.HtmlDocumentationOptions.DocumentationTypeRoutes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiControllerMethodTemplate">
+             <summary>
+               Looks up a localized string similar to &lt;tr&gt;
+                &lt;td class=&quot;api-name&quot;&gt;
+                    &lt;a href=&quot;$$GUIDE_METHOD_URI$$&quot;&gt;($$HTTP_METHODS$$) $$METHOD_NAME$$&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;api-documentation&quot;&gt;
+                    &lt;p&gt;$$METHOD_DESCRIPTION$$&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiControllerTemplate">
+             <summary>
+               Looks up a localized string similar to &lt;h2 id=&quot;$$CONTROLLER_NAME$$&quot;&gt;&lt;a href=&quot;$$GUIDE_CONTROLLER_URI$$&quot;&gt;$$CONTROLLER_NAME$$&lt;/a&gt;&lt;/h2&gt;
+            &lt;p&gt;$$CONTROLLER_DESCRIPTION$$&lt;/p&gt;
+            &lt;table class=&quot;help-page-table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Method&lt;/th&gt;
+                        &lt;th&gt;Description&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    $$CONTROLLER_METHODS$$
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+            .
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiDictionaryTypeTable">
+             <summary>
+               Looks up a localized string similar to &lt;table class=&quot;help-page-table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Type&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Key&lt;/td&gt;
+                        &lt;td&gt;$$KEY_TYPE$$&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Value&lt;/td&gt;
+                        &lt;td&gt;$$VALUE_TYPE$$&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiEnumTable">
+             <summary>
+               Looks up a localized string similar to &lt;table class=&quot;help-page-table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Value&lt;/th&gt;
+                        &lt;th&gt;Description&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    $$TABLE_ROWS$$
+                &lt;/tbody&gt;
+            &lt;/table&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiEnumTableRow">
+             <summary>
+               Looks up a localized string similar to &lt;tr&gt;
+                &lt;td class=&quot;enun-name&quot;&gt;$$ENUM_NAME$$&lt;/td&gt;
+                &lt;td class=&quot;enum-value&quot;&gt;$$ENUM_VALUE$$&lt;/td&gt;
+                &lt;td class=&quot;enum-description&quot;&gt;
+                    &lt;p&gt;$$ENUM_DESCRIPTION$$&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            .
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiMethodTemplate">
+             <summary>
+               Looks up a localized string similar to &lt;div&gt;
+            
+                &lt;h2&gt;&lt;a href=&quot;$$CONTOLLER_URI$$&quot;&gt;$$CONTROLLER_NAME$$&lt;/a&gt; : $$METHOD_NAME$$&lt;/h2&gt;
+                &lt;p&gt;$$METHOD_DESCRIPTION$$&lt;/p&gt;
+            
+                &lt;h3&gt;Routes&lt;/h3&gt;
+                &lt;p&gt;$$ACTION_ROUTES$$&lt;/p&gt;
+            
+                &lt;h2&gt;Authorisation Policies:&lt;/h2&gt;
+                &lt;p&gt;$$AUTH_POLICIES$$&lt;/p&gt;
+            
+                &lt;h2&gt;Request Information&lt;/h2&gt;
+            
+                &lt;h3&gt;Allowed Request Formats&lt;/h3&gt;
+                $$REQUEST_FORMATS$$
+            
+                &lt;h3&gt;Header Parameters&lt;/h3&gt;
+                $$HEADER_PARAMETERS$$
+            
+                &lt;h3&gt;Route Parameters&lt;/h3&gt;
+                $$ROUTE_PARAMETERS$$
+            
+                &lt;h3&gt;Body Parameters&lt;/h3&gt;
+                $$BO [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiPageTemplate">
+             <summary>
+               Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+            
+            &lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            &lt;head runat=&quot;server&quot;&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+            
+                &lt;title&gt;$$PAGE_TITLE$$&lt;/title&gt;
+            
+                &lt;!-- Latest compiled and minified CSS --&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+ [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiResponseTypeTable">
+             <summary>
+               Looks up a localized string similar to &lt;table class=&quot;help-page-table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Code&lt;/th&gt;
+                        &lt;th&gt;Description&lt;/th&gt;
+                        &lt;th&gt;Type&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    $$TABLE_ROWS$$
+                &lt;/tbody&gt;
+            &lt;/table&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiResponseTypeTableRow">
+             <summary>
+               Looks up a localized string similar to &lt;tr&gt;
+                &lt;td class=&quot;enun-name&quot;&gt;$$CODE$$&lt;/td&gt;
+                &lt;td class=&quot;enum-value&quot;&gt;$$DESCRIPTION$$&lt;/td&gt;
+                &lt;td class=&quot;enum-description&quot;&gt;$$TYPE$$&lt;/td&gt;
+            &lt;/tr&gt;
+            .
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.ApiType">
+             <summary>
+               Looks up a localized string similar to &lt;h2&gt;$$TYPE_NAME$$&lt;/h2&gt;
+            &lt;div&gt;
+                &lt;p&gt;
+                    $$TYPE_DESCRIPTION$$
+                &lt;/p&gt;
+            
+                $$TYPE_PROPERTIES$$
+            &lt;/div&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.TypeTable">
+             <summary>
+               Looks up a localized string similar to &lt;table class=&quot;help-page-table&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Description&lt;/th&gt;
+                        &lt;th&gt;Type&lt;/th&gt;
+                        &lt;th&gt;Additional information&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    $$TABLE_ROWS$$
+                &lt;/tbody&gt;
+            &lt;/table&gt;.
+             </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentation.Properties.Resources.TypeTableRow">
+             <summary>
+               Looks up a localized string similar to &lt;tr&gt;
+                &lt;td class=&quot;parameter-name&quot;&gt;$$PARAMETER_NAME$$&lt;/td&gt;
+                &lt;td class=&quot;parameter-documentation&quot;&gt;
+                    &lt;p&gt;$$PARAMETER_DESCRIPTION$$&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td class=&quot;parameter-type&quot;&gt;
+                    $$PARAMETER_TYPE$$
+                &lt;/td&gt;
+                &lt;td class=&quot;parameter-annotations&quot;&gt;
+                    &lt;p&gt;$$PARAMETER_INFO$$&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            .
+             </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter.ApiDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter.HtmlDocumentationOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter.FormatResponse(Educ8IT.AspNetCore.SimpleApi.ApiMapping.ResponseObject)">
+            <summary>
+            
+            </summary>
+            <param name="responseObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Formatters.ApiHtmlDocumentationOutputFormatter.GetAuthPoliciesSection(Educ8IT.AspNetCore.SimpleApi.TypeDescriptions.IApiMethodItem)">
+            <summary>
+            
+            </summary>
+            <param name="methodItem"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

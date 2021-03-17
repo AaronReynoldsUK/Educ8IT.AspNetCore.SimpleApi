@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>$$PAGE_TITLE$$</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--<link href="Content/Css/ApiGuide.css" rel="stylesheet" />-->
+    <style type="text/css">
+
+        body {
+            padding-top: 70px;
+        }
+
+        .help-page h1,
+        .help-page .h1,
+        .help-page h2,
+        .help-page .h2,
+        .help-page h3,
+        .help-page .h3,
+        #body.help-page,
+        .help-page-table th,
+        .help-page-table pre,
+        .help-page-table p {
+            font-family: "Segoe UI Light", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .help-page pre.wrapped {
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            white-space: pre-wrap;
+        }
+
+        .help-page .warning-message-container {
+            margin-top: 20px;
+            padding: 0 10px;
+            color: #525252;
+            background: #EFDCA9;
+            border: 1px solid #CCCCCC;
+        }
+
+        .help-page-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin: 0px 0px 20px 0px;
+            border-top: 1px solid #D4D4D4;
+        }
+
+            .help-page-table th {
+                text-align: left;
+                font-weight: bold;
+                border-bottom: 1px solid #D4D4D4;
+                padding: 5px 6px 5px 6px;
+            }
+
+            .help-page-table td {
+                border-bottom: 1px solid #D4D4D4;
+                padding: 10px 8px 10px 8px;
+                vertical-align: top;
+            }
+
+            .help-page-table pre,
+            .help-page-table p {
+                margin: 0px;
+                padding: 0px;
+                font-family: inherit;
+                font-size: 100%;
+            }
+
+            .help-page-table tbody tr:hover td {
+                background-color: #F3F3F3;
+            }
+
+        .help-page a:hover {
+            background-color: transparent;
+        }
+
+        .help-page .sample-header {
+            border: 2px solid #D4D4D4;
+            background: #00497E;
+            color: #FFFFFF;
+            padding: 8px 15px;
+            border-bottom: none;
+            display: inline-block;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .help-page .sample-content {
+            display: block;
+            border-width: 0;
+            padding: 15px 20px;
+            background: #FFFFFF;
+            border: 2px solid #D4D4D4;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .help-page .api-name {
+            width: 40%;
+        }
+
+        .help-page .api-documentation {
+            width: 60%;
+        }
+
+        .help-page .parameter-name {
+            width: 20%;
+        }
+
+        .help-page .parameter-documentation {
+            width: 40%;
+        }
+
+        .help-page .parameter-type {
+            width: 20%;
+        }
+
+        .help-page .parameter-annotations {
+            width: 20%;
+        }
+
+        .help-page h1,
+        .help-page .h1 {
+            font-size: 36px;
+            line-height: normal;
+        }
+
+        .help-page h2,
+        .help-page .h2 {
+            font-size: 24px;
+        }
+
+        .help-page h3,
+        .help-page .h3 {
+            font-size: 20px;
+        }
+
+        #body.help-page {
+            font-size: 14px;
+            line-height: 143%;
+            color: #333;
+        }
+
+        .help-page a {
+            color: #0000EE;
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="frmApiDocs">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="$$BRAND_LINK$$">$$BRAND$$</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="$$DOCUMENTATION_HOME_URL$$">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+
+            <div class="help-page">
+                <!--
+                <header>
+                    <div class="content-wrapper">
+                        <div class="float-left">
+                            <h1>$$PAGE_HEADING$$</h1>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="featured">
+                    <div class="content-wrapper">
+                        $$PAGE_BLURB$$
+                    </div>
+                </section>
+                -->
+                <section class="content-wrapper main-content clear-fix">
+                    $$PAGE_CONTENT$$
+                </section>
+            </div>
+
+            <hr />
+            <footer>
+                <p>$$COPYRIGHT_NOTICE$$</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>
