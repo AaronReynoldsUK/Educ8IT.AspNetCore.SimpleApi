@@ -754,7 +754,40 @@ namespace Educ8IT.AspNetCore.SimpleApi.TypeDescriptions
 
                 if (!String.IsNullOrEmpty(__simpleParameterValue))
                     methodArguments[__paramIndex] = Conversion.ConvertToType(__simpleParameterValue, __param.Type);
+
+                if (__param.Type.IsDictionary())
+                {
+                    IDictionary<string, string> t = new Dictionary<string, string>();
+                    foreach (string k in context.Request.Query.Keys)
+                    {
+                        t[k] = context.Request.Query[k].ToString();
+                    }
+                    methodArguments[__paramIndex] = t;
+                }
             }
+
+            //if (this.MethodParameters.Count == 1 && this.MethodParameters.First().IsQueryParameter && this.MethodParameters.First().Type.IsDictionary())
+            //{
+            //    // Convert to Dictionary
+            //    //context.Request.Query.Keys.ToDictionary(k => k, k => context.Request.Query[k]);
+
+            //    IDictionary<string, string> t = new Dictionary<string, string>();
+            //    foreach (string k in context.Request.Query.Keys)
+            //    {
+            //        t[k] = context.Request.Query[k].ToString();
+            //    }
+            //    if (t != null)
+            //    {
+            //        methodArguments[0] = t;
+            //    }
+            //}
+            //else
+            //{
+
+            //}
+
+
+
 
             //var __methodArguments = new List<object>();
 

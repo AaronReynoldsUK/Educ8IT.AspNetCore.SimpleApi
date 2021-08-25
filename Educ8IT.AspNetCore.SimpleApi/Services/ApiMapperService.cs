@@ -167,7 +167,7 @@ namespace Educ8IT.AspNetCore.SimpleApi
                                 .FirstOrDefault(eh => eh.IsHandled(endpointContext.PipelineException.GetType()))
                             ?? ApiMapperOptions.ContextExceptionHandlers
                                 .FirstOrDefault(eh => eh.IsHandled(typeof(Exception)))
-                    : null;
+                        : null;
 
                     if (__matchedExceptionHandler != null)
                     {
@@ -411,11 +411,18 @@ namespace Educ8IT.AspNetCore.SimpleApi
             var __responseTypeMatch = endpointContext.ApiMethodItem.ResponseTypes
                 .FirstOrDefault(e => e.Value == endpointContext.ActionResult.ResultType);
 
+            var __statusCode = (int)endpointContext.ActionResult.StatusCode;
+            var __expectedType = endpointContext.ApiMethodItem.ResponseTypes.ContainsKey(__statusCode)
+                ? endpointContext.ApiMethodItem.ResponseTypes.FirstOrDefault(t => t.Key == __statusCode).Value
+                : null;
+            var __responseTypeSent = endpointContext.ActionResult.ResultType.GetReadableTypeNameTextPlain();
+            var __responseTypeExpected = __expectedType?.GetReadableTypeNameTextPlain() ?? "U/K";
+
             if (__responseTypeMatchCount == 0 && endpointContext.ApiMethodItem.ResponseTypes.Count > 0)
             {
                 endpointContext.ShortCircuitWithException(
                     new CustomHttpException(
-                        "Unrecognised Response Type in API",
+                        $"Unrecognised Response Type in API: {__responseTypeSent}\nExpected Type: {__responseTypeExpected}",
                         HttpStatusCode.InternalServerError));
                 return;
             }

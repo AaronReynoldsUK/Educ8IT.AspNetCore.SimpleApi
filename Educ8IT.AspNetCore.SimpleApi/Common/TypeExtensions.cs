@@ -52,6 +52,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Common
             return modelName;
         }
 
+        public static string GetReadableTypeNameTextPlain(this Type type)
+        {
+            return type.GetReadableTypeName().Replace("&lt;", "<").Replace("&gt;", ">");
+        }
+
         /// <summary>
         /// Determine if this type is Nullable
         /// </summary>

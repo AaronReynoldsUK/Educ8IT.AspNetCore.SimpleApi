@@ -89,7 +89,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.ActionResults
         /// <returns>An <see cref="ActionResult"/> with information about the request to go as a response.</returns>
         public static ActionResult Accepted(object resultObject)
         {
-            return new ActionResult(HttpStatusCode.Created, resultObject);
+            return new ActionResult(HttpStatusCode.Accepted, resultObject);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.ActionResults
         /// <returns>A HateosActionResult object</returns>
         public static ActionResult AcceptedWithStatusAt(object resultObject, HateosResultObjectLinks links)
         {
-            return GetHateosActionResult(HttpStatusCode.Created, resultObject, links);
+            return GetHateosActionResult(HttpStatusCode.Accepted, resultObject, links);
         }
 
         /// <summary>
