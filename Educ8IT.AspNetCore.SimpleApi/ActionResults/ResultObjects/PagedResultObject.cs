@@ -63,10 +63,18 @@ namespace Educ8IT.AspNetCore.SimpleApi.ActionResults
         {
             get
             {
-                if (RecordCount.HasValue)
-                    return (RecordCount.Value > 0 ? (RecordCount.Value / PageSize.Value) + 1 : 0);
-                else
+                // AR: 2021-12-31: remove DIV by ZERO possibility and return correct values
+                if (!RecordCount.HasValue || !PageSize.HasValue)
                     return default;
+                else if (PageSize == 0)
+                    return default;
+                else if (RecordCount == 0)
+                    return 0;
+                else
+                {
+                    // AR: 2021-12-31: Fix +1 page count when RecordCount is a multiple of PageSize
+                    return (RecordCount / PageSize) + (RecordCount % PageSize == 0 ? 0 : 1);
+                }
             }
             set { return; }
         }
