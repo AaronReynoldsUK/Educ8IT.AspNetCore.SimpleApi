@@ -1,5 +1,8 @@
 ﻿// Copyright (c) Aaron Reynolds. All rights reserved. Licensed under the Apache License, Version 2.0.
 
+using System;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Educ8IT.AspNetCore.SimpleApi.Identity
@@ -17,9 +20,52 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="tokenId"></param>
+        /// <returns></returns>
+        Task<ApiUserToken> GetTokenByIdAsync(Guid tokenId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tokenValue"></param>
+        /// <returns></returns>
+        Task<ApiUserToken> GetTokenByTokenValueAsync(string tokenValue);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tokenValue"></param>
+        /// <param name="tokenType"></param>
+        /// <returns></returns>
+        Task<ApiUserToken> GetTokenByTokenValueAsync(string tokenValue, string tokenType);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        Task<List<ApiUserToken>> GetTokensByUserIdAsync(Guid userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        Task<ApiUser> GetUserByIdAsync(Guid userId);
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
-        Task<ApiUser> GetUserByNameAsync(string userName);
+        Task<ApiUser> GetUserByUserNameAsync(string userName);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="emailAddress"></param>
+        /// <returns></returns>
+        Task<ApiUser> GetUserByEmailAddressAsync(string emailAddress);
 
         /// <summary>
         /// 
@@ -30,11 +76,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         Task<bool> IsValidPasswordAsync(ApiUser apiUser, string password);
 
         /// <summary>
-        /// 
+        /// Checks if the account is disabled or locked out in some way
         /// </summary>
         /// <param name="apiUser"></param>
         /// <returns></returns>
-        Task<bool> CanSignIn(ApiUser apiUser);
+        Task<bool> CanSignInAsync(ApiUser apiUser);
 
         /// <summary>
         /// 
@@ -54,7 +100,14 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// Generates a new random password using the Options specified in the setup action on IdentityManager
         /// </summary>
         /// <returns></returns>
-        Task<string> GenerateNewPassword();
+        Task<string> GenerateNewPassword(int length = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        Task<string> GenerateNewToken(int length = 0);
 
         /// <summary>
         /// This will generate a new password hash for the supplied password. 
@@ -77,11 +130,19 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="userId"></param>
         /// <param name="token"></param>
         /// <param name="tokenType"></param>
         /// <returns></returns>
         Task RemoveToken(string token, string tokenType);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="apiUser"></param>
+        /// <param name="transientOnly"></param>
+        /// <param name="tokenType"></param>
+        /// <returns></returns>
+        Task RemoveUserTokens(ApiUser apiUser, bool transientOnly, string tokenType = null);
 
         /// <summary>
         /// 
@@ -92,43 +153,64 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="token">The authentication token provided</param>
-        /// <param name="scheme">e.g. Bearer</param>
-        /// <param name="refreshUsingTTL">If supplied, the service will extend the token lifespan using this provided value</param>
+        /// <param name="apiUser"></param>
+        /// <param name="tokenType"></param>
+        /// <param name="ttl"></param>
+        /// <param name="extendedData"></param>
         /// <returns></returns>
-        Task<ApiUser> AuthenticateTokenAsync(string token, string scheme, int? refreshUsingTTL = null);
+        Task<ApiUserToken> NewTokenAsync(
+            ApiUser apiUser, string tokenType, int? ttl,
+            Dictionary<string, object> extendedData);
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="apiUser"></param>
+        ///// <param name="refreshToken"></param>
+        ///// <param name="tokenType"></param>
+        ///// <returns></returns>
+        //Task RefreshAccessToken(ApiUser apiUser, string refreshToken, string tokenType);
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="token">The authentication token provided</param>
+        ///// <param name="scheme">e.g. Bearer</param>
+        ///// <param name="refreshUsingTTL">If supplied, the service will extend the token lifespan using this provided value</param>
+        ///// <returns></returns>
+        //Task<ApiUser> AuthenticateTokenAsync(string token, string scheme, int? refreshUsingTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="registerRequest"></param>
+        /// <param name="emailAddress"></param>
+        /// <param name="password"></param>
+        /// <param name="displayName"></param>
         /// <returns></returns>
         Task<ApiUser> RegisterAsync(string emailAddress, string password, string displayName = null);
 
-        //public Task<ApiUser> AuthenticateTokenAsync(string token)
-        //{
-        //    ApiUser __authUser = new ApiUser();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="apiUser"></param>
+        /// <param name="schemeName"></param>
+        /// <param name="extraClaims"></param>
+        /// <returns></returns>
+        abstract ClaimsPrincipal GetClaimsPrinciple(ApiUser apiUser, string schemeName, List<Claim> extraClaims = null);
 
-        //    return Task.FromResult(__authUser);
-        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="apiUserToken"></param>
+        /// <returns></returns>
+        Task UpdateClaims(ClaimsPrincipal user, ApiUserToken apiUserToken);
 
-        //public ApiUser Authenticate (string userName, string password)
-        //{
-        //    return new ApiUser();
-        //}
-
-        //public void SignInUser(ApiUser apiUser, string authenticationType)
-        //{
-        //    var __claims = new List<Claim>();
-        //    //__claims.Add(new Claim());
-        //    var __identity = new ClaimsIdentity(__claims, BearerAuthenticationDefaults.AuthenticationScheme);
-        //    var __principle = new ClaimsPrincipal(__identity);
-
-        //    var __ticket = new AuthenticationTicket(__principle,
-        //        new AuthenticationProperties()
-        //        {
-
-        //        })
-        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        Task<List<ApiMfa>> GetMfaEntriesByUserIdAsync(Guid userId);
     }
 }

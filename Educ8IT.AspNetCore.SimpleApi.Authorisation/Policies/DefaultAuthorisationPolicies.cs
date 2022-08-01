@@ -71,5 +71,53 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
         }
 
         #endregion
+
+        #region MFA Policy
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string MfaPolicyName = "MfaPolicy";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static AuthorizationPolicy MfaPolicy()
+        {
+            AuthorizationPolicyBuilder authorizationPolicyBuilder = new AuthorizationPolicyBuilder();
+            authorizationPolicyBuilder.Requirements.Add(new MfaRequirement());
+
+            // this line should auto check without need for AuthorisationHandlerOfTypeMfaRequirement
+            //authorizationPolicyBuilder.RequireClaim(MfaRequirement.RequirementKey);
+
+            return authorizationPolicyBuilder.Build();
+        }
+
+        #endregion
+
+        #region Email Address Confirmed Policy
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public const string EmailConfirmedPolicyName = "MfaPolicy";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static AuthorizationPolicy EmailConfirmedPolicy()
+        {
+            AuthorizationPolicyBuilder authorizationPolicyBuilder = new AuthorizationPolicyBuilder();
+            authorizationPolicyBuilder.Requirements.Add(new EmailConfirmedRequirement());
+
+            // this line should auto check without need for AuthorisationHandlerOfTypeMfaRequirement
+            //authorizationPolicyBuilder.RequireClaim(EmailConfirmedRequirement.RequirementKey);
+
+            return authorizationPolicyBuilder.Build();
+        }
+
+        #endregion
     }
 }

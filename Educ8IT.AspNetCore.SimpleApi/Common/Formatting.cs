@@ -8,6 +8,9 @@ using System.Text;
 
 namespace Educ8IT.AspNetCore.SimpleApi.Common
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Formatting
     {
         #region Number to String formatting

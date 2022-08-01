@@ -184,19 +184,24 @@ namespace Educ8IT.AspNetCore.SimpleApi
 
         private async Task ProcessRequest(EndpointContext endpointContext)
         {
-            bool __shortCircuit = false;
+            //bool __shortCircuit = false;
             if (ApiMapperOptions.Filters != null)
             {
                 foreach (var __preProcessor in ApiMapperOptions.Filters)
                 {
-                    __shortCircuit = await __preProcessor.PreExecution(endpointContext);
+                    //__shortCircuit 
+                    endpointContext.ShortCircuit = await __preProcessor.PreExecution(endpointContext);
 
-                    if (__shortCircuit)
+                    //if (__shortCircuit)
+                    if (endpointContext.ShortCircuit)
                         break;
                 }
             }
 
-            if (__shortCircuit)
+            //endpointContext.ShortCircuit = __shortCircuit;
+
+            //if (__shortCircuit)
+            if (endpointContext.ShortCircuit)
                 return;
 
             endpointContext.CheckRequest();
@@ -213,16 +218,21 @@ namespace Educ8IT.AspNetCore.SimpleApi
 
             CheckResponseType(endpointContext);
 
-            if (!__shortCircuit)
+            //if (!__shortCircuit)
+            if (!endpointContext.ShortCircuit)
             {
                 foreach (var __postProcessor in ApiMapperOptions.Filters.Reverse<Filters.IFilter>())
                 {
-                    __shortCircuit = await __postProcessor.PostExecution(endpointContext);
+                    //__shortCircuit 
+                    endpointContext.ShortCircuit = await __postProcessor.PostExecution(endpointContext);
 
-                    if (__shortCircuit)
+                    //if (__shortCircuit)
+                    if (endpointContext.ShortCircuit)
                         break;
                 }
             }
+
+            //endpointContext.ShortCircuit = __shortCircuit;
         }
 
         private object GetContructorInstance(EndpointContext endpointContext)

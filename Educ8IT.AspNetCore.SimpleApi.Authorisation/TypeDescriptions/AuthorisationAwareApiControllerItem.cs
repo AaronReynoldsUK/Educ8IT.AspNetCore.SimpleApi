@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Aaron Reynolds. All rights reserved. Licensed under the Apache License, Version 2.0.
 
-using Educ8IT.AspNetCore.SimpleApi.Authorisation.Attributes;
-using Educ8IT.AspNetCore.SimpleApi.TypeDescriptions;
+using Educ8IT.AspNetCore.SimpleApi.Authorisation;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -9,13 +8,15 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions
+namespace Educ8IT.AspNetCore.SimpleApi.TypeDescriptions
 {
     /// <summary>
     /// 
     /// </summary>
-    public class AuthorisationAwareApiControllerItem : ApiControllerItem
+    public class AuthorisationAwareApiControllerItem : AuthenticationAwareApiControllerItem
     {
+        #region Constructors
+
         /// <summary>
         /// 
         /// </summary>
@@ -30,36 +31,20 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions
             ParseAuthorisationAttributes();
         }
 
-        private void ParseAuthorisationAttributes()
-        {
-            AuthoriseAttribute = null;
+        #endregion
 
-            foreach (var __attribute in Attributes)
-            {
-                if (__attribute.Key == "AuthorizeAttribute")
-                {
-                    if (this.AuthoriseAttribute == null)
-                        this.AuthoriseAttribute = new AuthoriseAttribute();
+        #region Fields
 
-                    this.AuthoriseAttribute
-                            .CombineWith(__attribute.Value as AuthorizeAttribute);
-                }
-                else if (__attribute.Key == "AuthoriseAttribute")
-                {
-                    if (this.AuthoriseAttribute == null)
-                        AuthoriseAttribute = __attribute.Value as AuthoriseAttribute;
-                    else
-                        AuthoriseAttribute.CombineWith(__attribute.Value as AuthoriseAttribute);
-                }
-            }
-        }
+        private List<IApiMethodItem> _Methods = null;
+        
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// 
         /// </summary>
         public AuthoriseAttribute AuthoriseAttribute { get; private set; }
-
-        private List<IApiMethodItem> _Methods = null;
 
         /// <summary>
         /// 
@@ -88,5 +73,35 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions
 
             return __listOut;
         }
+
+        #endregion
+
+        #region Private Methods
+
+        private void ParseAuthorisationAttributes()
+        {
+            AuthoriseAttribute = null;
+
+            foreach (var __attribute in Attributes)
+            {
+                if (__attribute.Key == "AuthorizeAttribute")
+                {
+                    if (AuthoriseAttribute == null)
+                        AuthoriseAttribute = new AuthoriseAttribute();
+
+                    AuthoriseAttribute
+                            .CombineWith(__attribute.Value as AuthorizeAttribute);
+                }
+                else if (__attribute.Key == "AuthoriseAttribute")
+                {
+                    if (AuthoriseAttribute == null)
+                        AuthoriseAttribute = __attribute.Value as AuthoriseAttribute;
+                    else
+                        AuthoriseAttribute.CombineWith(__attribute.Value as AuthoriseAttribute);
+                }
+            }
+        }
+
+        #endregion
     }
 }

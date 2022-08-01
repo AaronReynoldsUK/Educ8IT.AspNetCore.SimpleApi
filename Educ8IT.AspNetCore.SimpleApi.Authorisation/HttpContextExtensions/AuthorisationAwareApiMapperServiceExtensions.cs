@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Aaron Reynolds. All rights reserved. Licensed under the Apache License, Version 2.0.
 
-using Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions;
+using Educ8IT.AspNetCore.SimpleApi.Authorisation;
 using Educ8IT.AspNetCore.SimpleApi.Exceptions;
 using Educ8IT.AspNetCore.SimpleApi.TypeDescriptions;
 using Microsoft.AspNetCore.Authorization;
@@ -35,7 +35,9 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
         /// <param name="context"></param>
         /// <param name="methodItem"></param>
         /// <returns></returns>
-        public static async Task<AuthorizationResult> AuthorisationCheck(this HttpContext context, AuthorisationAwareApiMethodItem methodItem)
+        public static async Task<AuthorizationResult> AuthorisationCheck(
+            this HttpContext context, 
+            AuthorisationAwareApiMethodItem methodItem)
         {
             var __authServices = context.RequestServices.GetServices<IAuthorizationService>();
             var __authPolicyProvider = context.RequestServices.GetService<IAuthorizationPolicyProvider>();
@@ -49,7 +51,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
 
             foreach (var __authService in __authServices)
             {
-                if ((__authoriseAttribute.Policies?.Count ?? 0) > 0)
+                if ((__authoriseAttribute.Policies?.Length ?? 0) > 0)
                 {
                     foreach (string __authPolicy in __authoriseAttribute.Policies)
                     {
@@ -72,6 +74,8 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
                         __defaultPolicy);
                 }
             }
+
+            //context.GetTokenAsync
 
             return authorizationResult ?? AuthorizationResult.Failed();
         }

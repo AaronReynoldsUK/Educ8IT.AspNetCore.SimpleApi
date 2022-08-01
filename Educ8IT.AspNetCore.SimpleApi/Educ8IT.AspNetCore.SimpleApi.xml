@@ -1415,6 +1415,52 @@
              of relying on selection of a route based on the given set of route values.
             </summary>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions.AppendToEntry(Microsoft.AspNetCore.Http.IHeaderDictionary,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="headers"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions.AddIfNotExist``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="entry"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Concatenation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.Concatenation.Combine``1(``0[],``0[],System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="arrayOne"></param>
+            <param name="arrayTwo"></param>
+            <param name="allowDuplicates"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.Concatenation.Combine``1(``0[],``0,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="arrayOne"></param>
+            <param name="singleValue"></param>
+            <param name="allowDuplicates"></param>
+            <returns></returns>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Conversion">
             <summary>
             Common data-type conversion extension methods
@@ -1563,6 +1609,14 @@
             <param name="handleMultipleValuesPerKey"></param>
             <returns></returns>
         </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.Conversion.ConvertToType(System.String,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="dataIn"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.EConversionFormat">
             <summary>
             Used in object conversion to string
@@ -1604,6 +1658,11 @@
             </summary>
             <param name="fileName"></param>
             <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Formatting">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.Formatting.ToNumberFormat(System.Double,System.Globalization.NumberFormatInfo,System.Boolean)">
             <summary>
@@ -1808,6 +1867,20 @@
             </summary>
             <param name="encoding"></param>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.StringExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.StringExtensions.ReplaceIn(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="template"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.TypeExtensions">
             <summary>
             
@@ -1883,6 +1956,187 @@
             If this type is a Dictionary, get the type of the Dictionary value
             </summary>
             <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Communication.DefaultEmailService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.DefaultEmailService.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Communication.DefaultEmailService},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.DefaultEmailService.SendEmailAsync(System.String,System.String,System.Boolean,System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress})">
+            <summary>
+            
+            </summary>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="isHtml"></param>
+            <param name="To"></param>
+            <param name="Cc"></param>
+            <param name="Bcc"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceExtensions.LoadEmailServiceOptions(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="serviceDescriptors"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceExtensions.GetEmailServiceOptions(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceExtensions.AddMockEmailService(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceExtensions.AddMockEmailService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions})">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="setupAction"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SmtpServerHostName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SmtpServerHostPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.UseTls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SmtpUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SmtpPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SenderName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.SenderEmail">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.EmailSendTimeoutMS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.OK">
+            <summary>
+            TODO: add validation of values
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.HasCredentials">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions.GetCredentials">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService.ReplaceIn(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Replace all occurrences of markers with values in the template.
+            </summary>
+            <param name="template"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService.SendEmailAsync(System.String,System.String,System.Boolean,System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress})">
+            <summary>
+            
+            </summary>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="isHtml"></param>
+            <param name="To"></param>
+            <param name="Cc"></param>
+            <param name="Bcc"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Communication.MockEmailService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.MockEmailService.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Communication.MockEmailService},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Communication.EmailServiceOptions})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Communication.MockEmailService.SendEmailAsync(System.String,System.String,System.Boolean,System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress},System.Collections.Generic.List{System.Net.Mail.MailAddress})">
+            <summary>
+            
+            </summary>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="isHtml"></param>
+            <param name="To"></param>
+            <param name="Cc"></param>
+            <param name="Bcc"></param>
             <returns></returns>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.ContextExceptionHandlers.CustomHttpExceptionHandler">
@@ -2253,6 +2507,107 @@
             
             </summary>
             <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto">
+            <summary>
+            Interface for Insert and Update DTOs (or POST / PUT)
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto.IsValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto.Validate``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="topLevelObject"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto.AddValidationItem(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto.AddItem(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.IValidationBaseDto.GetValidationProblemDetails">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.IsValid">
+            <summary>
+            Has this DTO passed Validation?
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.problemDetails">
+            <summary>
+            Filled with any errors or validation problems
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.Validate``1(``0)">
+            <summary>
+            Validate the Entity data in the DTO (overridden in sub-classes).
+            </summary>
+            <typeparam name="T">An object of T</typeparam>
+            <param name="topLevelObject">An insance of a sub-class</param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.AddValidationItem(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.AddItem(System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationBaseDto.GetValidationProblemDetails">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationHelper.IsValid(System.String,System.Text.RegularExpressions.Regex,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="dataIn"></param>
+            <param name="regularExpression"></param>
+            <param name="allowEmpty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Dto.ValidationHelper.IsValid(System.String,System.String[],System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="dataIn"></param>
+            <param name="allowedValues"></param>
+            <param name="allowEmpty"></param>
+            <param name="caseInsensitive"></param>
             <returns></returns>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Exceptions.CustomHttpException">
@@ -2977,6 +3332,95 @@
             <param name="versionsOnMethod"></param>
             <returns></returns>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails">
+            <summary>
+            Implementation of https://tools.ietf.org/html/rfc7807
+            Response type should be application/problem+json or application/problem+xml
+            Sub-classes can add additional extensions for e.g. validation information
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Type">
+            <summary>
+            A URI reference [RFC3986] that identifies the problem type. 
+            This specification encourages that, when dereferenced, 
+              it provide human-readable documentation for the 
+              problem type (e.g., using HTML [W3C.REC-html5-20141028]).  
+              When this member is not present, its value is assumed to be "about:blank".
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Title">
+            <summary>
+            A short, human-readable summary of the problem type.  
+            It SHOULD NOT change from occurrence to occurrence of the problem, 
+              except for purposes of localization 
+              (e.g., using proactive content negotiation; see[RFC7231], Section 3.4).
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Status">
+            <summary>
+            The HTTP status code ([RFC7231], Section 6) 
+              generated by the origin server for this occurrence of the problem.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.ShouldSerializeStatusCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Detail">
+            <summary>
+            A human-readable explanation specific to this occurrence of the problem.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Instance">
+            <summary>
+            A URI reference that identifies the specific occurrence of the problem.  
+            It may or may not yield further information if dereferenced.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Validation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.ShouldSerializeValidation">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Extensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.ShouldSerializeExtensions">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension.Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension.Items">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions">
             <summary>
             
@@ -3151,77 +3595,6 @@
         <member name="P:Educ8IT.AspNetCore.SimpleApi.IApiMapperOptions.AllowVersionOverrides">
             <summary>
             Allows versions specified in Query to override Route to override Header
-            </summary>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails">
-            <summary>
-            Implementation of https://tools.ietf.org/html/rfc7807
-            Response type should be application/problem+json or application/problem+xml
-            Sub-classes can add additional extensions for e.g. validation information
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Type">
-            <summary>
-            A URI reference [RFC3986] that identifies the problem type. 
-            This specification encourages that, when dereferenced, 
-              it provide human-readable documentation for the 
-              problem type (e.g., using HTML [W3C.REC-html5-20141028]).  
-              When this member is not present, its value is assumed to be "about:blank".
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Title">
-            <summary>
-            A short, human-readable summary of the problem type.  
-            It SHOULD NOT change from occurrence to occurrence of the problem, 
-              except for purposes of localization 
-              (e.g., using proactive content negotiation; see[RFC7231], Section 3.4).
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Status">
-            <summary>
-            The HTTP status code ([RFC7231], Section 6) 
-              generated by the origin server for this occurrence of the problem.
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.StatusCode">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Detail">
-            <summary>
-            A human-readable explanation specific to this occurrence of the problem.
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Instance">
-            <summary>
-            A URI reference that identifies the specific occurrence of the problem.  
-            It may or may not yield further information if dereferenced.
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Validation">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetails.Extensions">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension.Key">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Models.ProblemDetailsExtension.Items">
-            <summary>
-            
             </summary>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.RouteContraints.VersionRouteConstraint">

@@ -2,7 +2,6 @@
 
 using Educ8IT.AspNetCore.SimpleApi.ApiMapping;
 using Educ8IT.AspNetCore.SimpleApi.Attributes;
-using Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions;
 using Educ8IT.AspNetCore.SimpleApi.TypeDescriptions;
 using Microsoft.Extensions.Options;
 using System;

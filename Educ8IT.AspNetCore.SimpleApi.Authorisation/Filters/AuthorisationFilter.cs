@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Aaron Reynolds. All rights reserved. Licensed under the Apache License, Version 2.0.
 
 using Educ8IT.AspNetCore.SimpleApi.Authorisation;
-using Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions;
 using Educ8IT.AspNetCore.SimpleApi.Exceptions;
 using Educ8IT.AspNetCore.SimpleApi.TypeDescriptions;
 using Microsoft.AspNetCore.Authentication;
@@ -35,6 +34,12 @@ namespace Educ8IT.AspNetCore.SimpleApi.Filters
             if (endpointContext.Endpoint == null)
                 throw new InvalidOperationException("There is no Endpoint object for this request");
 
+            // Authorisation depends upon Authentication.
+            if (!endpointContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                return false;
+            }
+
             // This might not work if type is not exactly ApiMethodItem, experiment with this
             if (endpointContext.ApiMethodItem == null)
                 throw new InvalidOperationException("There is no ApiMethodItem object for this request");
@@ -57,8 +62,23 @@ namespace Educ8IT.AspNetCore.SimpleApi.Filters
                         {
                             foreach (var __failedRequirement in authCheck.Failure.FailedRequirements)
                             {
+                                if (__failedRequirement is IAuthorisationRequirement authorisationRequirement)
+                                {
+                                    if (!String.IsNullOrEmpty(authorisationRequirement.SchemeName))
+                                    {
+                                        await endpointContext.HttpContext.ChallengeAsync(authorisationRequirement.SchemeName);
+                                    }
+                                    else
+                                    {
+                                        await endpointContext.HttpContext.ChallengeAsync();
+                                    }                                    
+                                    return false;
+                                }
+
                                 // Log which requirements failed...
                                 //__failedRequirement.GetType().Name;
+
+                                //if (__failedRequirement.)
                             }
                         }
 

@@ -7,7 +7,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
     /// <summary>
     /// 
     /// </summary>
-    public class AuthenticatedRequirement : IAuthorizationRequirement
+    public class AuthenticatedRequirement : IAuthorisationRequirement
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string SchemeName { get; set; }
     }
 }

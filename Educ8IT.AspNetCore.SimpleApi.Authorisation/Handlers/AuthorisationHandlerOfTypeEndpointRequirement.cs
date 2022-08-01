@@ -39,6 +39,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
             // we may need to check the AuthoriseAttribute on ApiMethodIdem
             // but for now... let's just compare the Unique name because we're on EndpointPolicy
 
+            // TODO: should this be VALUE not TYPE ??
             if (context.User?.HasClaim(c => c.Type == apiMethodItem.UniqueName) ?? false)
                 context.Succeed(requirement);
             else

@@ -61,6 +61,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Attributes
         public ResponseTypeAttribute(HttpStatusCode httpResponseCode)
         {
             HttpResponseCode = (int)httpResponseCode;
+            ResponseType = typeof(string);
         }
     }
 }

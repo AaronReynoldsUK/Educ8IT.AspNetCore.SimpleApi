@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Aaron Reynolds. All rights reserved. Licensed under the Apache License, Version 2.0.
 
-using Educ8IT.AspNetCore.SimpleApi.Authorisation.TypeDescriptions;
+using Educ8IT.AspNetCore.SimpleApi.Authorisation;
 using Educ8IT.AspNetCore.SimpleApi.TypeDescriptions;
 using Microsoft.AspNetCore.Authorization;
 using System;
@@ -43,7 +43,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
                 return Task.CompletedTask;
 
             // User must be a member of at least one of these Roles
-            if ((__authAttribute.Roles?.Count ?? 0) > 0)
+            if ((__authAttribute.Roles?.Length ?? 0) > 0)
             {
                 foreach (var role in __authAttribute.Roles)
                 {
@@ -59,7 +59,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
             }
 
             // User must be a member of each of these Roles
-            if ((__authAttribute.RequiredRoles?.Count ?? 0) > 0)
+            if ((__authAttribute.RequiredRoles?.Length ?? 0) > 0)
             {
                 foreach (var role in __authAttribute.Roles)
                 {

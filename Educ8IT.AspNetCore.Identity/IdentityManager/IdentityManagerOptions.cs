@@ -54,5 +54,24 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         public bool GeneratedPasswordsIncludeUpperCase { get; set; } = true;
 
         #endregion
+
+        #region Tokens
+
+        /// <summary>
+        /// Specify the length when generating new random tokens
+        /// </summary>
+        public int GeneratedTokenLength { get; set; } = 128;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TimeSpan AccessTokenLifespan { get; set; } = TimeSpan.FromMinutes(60);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TimeSpan RefreshTokenLifespan { get; set; } = TimeSpan.FromHours(24);
+
+        #endregion
     }
 }

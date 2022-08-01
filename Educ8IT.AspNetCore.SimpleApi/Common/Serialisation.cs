@@ -283,6 +283,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Common
             }
             catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
                 result = default;
             }
 

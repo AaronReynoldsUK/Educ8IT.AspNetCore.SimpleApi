@@ -24,6 +24,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         public Guid Id { get; set; }
 
         /// <summary>
+        /// The Id in the external data set / context
+        /// </summary>
+        public Guid? LinkedId { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [MaxLength(100)]
@@ -47,27 +52,12 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// <summary>
         /// 
         /// </summary>
-        public string EmailAddressConfirmationToken { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public bool EmailAddressIsConfirmed { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         public string PasswordHash { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ETwoFactorAuthenticationMethod TwoFactorAuthenticationMethod { get;set;}
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public string TwoFactorAuthenticationParameters { get; set; }
 
         /// <summary>
         /// 
@@ -103,6 +93,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Identity
         /// 
         /// </summary>
         public virtual ICollection<ApiUserToken> UserTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ICollection<ApiMfa> MfaOptions { get; set; }
 
         #endregion
 

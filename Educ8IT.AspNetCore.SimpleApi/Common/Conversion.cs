@@ -468,6 +468,12 @@ namespace Educ8IT.AspNetCore.SimpleApi.Common
 
         #region Parameter Conversion
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dataIn"></param>
+        /// <param name="destinationType"></param>
+        /// <returns></returns>
         public static object ConvertToType(string dataIn, Type destinationType)
         {
             if (destinationType == typeof(Guid?))

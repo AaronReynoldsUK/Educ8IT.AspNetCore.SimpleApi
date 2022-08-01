@@ -1,0 +1,145 @@
+Instead of add
+
+
+
+DB: 
+
+to be extensible we must allow more than 1 type of token:
+e.g.
+- mfa-token
+- refresh-token
+- auth-token
+
+also we _should_ allow more than 1 type of MFA
+
+also provide an endpoint which can be queried to get:
+- allowed endpoints?? (from claims)
+- roles
+- policies
+
+for the authenticated user
+
+also management API for controlling user auth including updating MFA options
+
+
+
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: ....
+X-AuthenticateUri: {auth url}
+
+/auth/token
+
+
+grant_type:
+- password (username+password)
+- refresh_token (client ID + Secret (not required??) + Refresh Token)
+- client_credentials (Client ID and Client Secret)
+
+
+where TOKEN requires MFA:
+{
+    "error": "mfa_required",
+    "error_description": "Multifactor authentication required",
+    "mfa_token": "Fe26...Ha"
+}
+
+AUTH0 then wants you to GET the auth options using the TOKEN,
+instead, we'll send them by adding this to above:
+
+	"mfa_methods": 
+	[
+		{
+			id: ...
+			"method": "email",
+			"data": "email@email.com"
+		},
+		{
+			id: ...
+			"method": "totp",
+			data: "google"
+		},
+		{
+			id: ...
+			method: sms
+			data: 075...
+		}
+	]
+
+POST /auth/challenge
+{
+	client_id: ...,
+	secret: ...,
+	method-id: ...,
+	mfa_token: ...
+}
+
+
+REFRESH RESPONSE
+{
+      "access_token": "eyJ...MoQ",
+      "expires_in": 86400,
+      "scope": "openid offline_access",
+      "id_token": "eyJ...0NE",
+      "token_type": "Bearer"
+}
+
+
+(client ID = application Id - not really relevant right now)
+
+POST => /auth/token
+token error reponse is "mfa_required" with optional type
+
+(at this stage, we've stored a temporary session var and sent it back as a state token)
+
+e.g. response includes "mfa_token"
+
+
+
+
+If we want user-level choice over MFA
+
+
+
+
+If we want API-level choice over MFA:
+- we can specify a MFA-Required policy
+- add MFA check middleware, if auth but no MFA, only allow access to specific AUTH
+
+Could use HTTP 407 Proxy Authentication Required (RFC 7235)
+
+Or, could use 401 Unauthorized (RFC 7235)
+
+Or, could use 403 Forbidden
+
+Or an unassigned 3xx (redirection) or 4xx (client error)
+
+
+Some MFA is out-of-band though
+
+i.e.
+
+401 => submit credentials => 200
+
+Or maybe 207 (multi-status)
+
+200 LOGIN
+401 
+302 Email Confiramtion
+302 MFA
+
+<?xml version="1.0" encoding="utf-8" ?>
+<multistatus>
+	<response>
+		<href>{url just accessed}</href>
+		<propstat>
+			<prop>
+			<status>HTTP/1.1 200 OK</status>
+			<location>
+			<error>
+			<responseDescription>
+		</propstat>
+	</response>
+</multistatus>
+
+OR make up own format and use JSON ??
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Educ8IT.AspNetCore.SimpleApi.HtmlDocumentationWithAuth</name>
+    </assembly>
+    <members>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentationWithAuth.Formatters.Output.ApiHtmlDocumentationOutputFormatterWithAuth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentationWithAuth.Formatters.Output.ApiHtmlDocumentationOutputFormatterWithAuth.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.HtmlDocumentationWithAuth.Formatters.Output.ApiHtmlDocumentationOutputFormatterWithAuth.GetAuthPoliciesSection(Educ8IT.AspNetCore.SimpleApi.TypeDescriptions.IApiMethodItem)">
+            <summary>
+            
+            </summary>
+            <param name="methodItem"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

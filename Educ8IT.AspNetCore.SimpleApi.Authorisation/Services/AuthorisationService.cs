@@ -59,18 +59,20 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authorisation
                 throw new ArgumentNullException(nameof(requirements));
             }
 
+            // Create a tracking context from the authorization inputs.
             var authContext = _authorizationHandlerContextFactory.CreateContext(requirements, user, resource);
 
+            // By default this returns an IEnumerable<IAuthorizationHandlers> from DI.
             var handlers = await _handlers.GetHandlersAsync(authContext);
 
+            // Invoke all handlers.
             foreach (var handler in handlers)
             {
                 await handler.HandleAsync(authContext);
             }
 
-            var result = _evaluator.Evaluate(authContext);
-
-            return result;
+            // Check the context, by default success is when all requirements have been met.
+            return _evaluator.Evaluate(authContext);
         }
 
         /// <summary>
