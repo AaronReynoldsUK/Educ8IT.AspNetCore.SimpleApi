@@ -366,3 +366,4 @@ FodyWeavers.xsd
 *.sln
 .editorconfig
 nuget.config
+DONOTPUBLISH*
