@@ -24,10 +24,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Dto
             if (regularExpression == null)
                 throw new ArgumentNullException(nameof(regularExpression));
 
-            if (String.IsNullOrEmpty(dataIn))
-            {
+            if (dataIn == null)
                 return allowEmpty;
-            }
+
+            if (String.IsNullOrEmpty(dataIn))
+                return allowEmpty;
 
             return regularExpression.IsMatch(dataIn);
         }

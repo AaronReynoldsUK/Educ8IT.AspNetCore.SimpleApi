@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Net;
 
 namespace Educ8IT.AspNetCore.SimpleApi.Common
 {
@@ -41,6 +45,55 @@ namespace Educ8IT.AspNetCore.SimpleApi.Common
                 return;
 
             list.Add(entry);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nameValueCollection"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static bool HasKey(this NameValueCollection nameValueCollection, string key)
+        {
+            return (nameValueCollection.AllKeys?.Contains(key) ?? false);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nameValueCollection"></param>
+        /// <param name="key"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
+        public static string GetValue(this NameValueCollection nameValueCollection, string key, string defaultValue = null)
+        {
+            return (nameValueCollection.AllKeys?.Contains(key) ?? false)
+                ? nameValueCollection[key] ?? defaultValue
+                : defaultValue;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nameValueCollection"></param>
+        /// <returns></returns>
+        public static string ToQueryString(this NameValueCollection nameValueCollection)
+        {
+            if (nameValueCollection == null)
+                throw new ArgumentNullException(nameof(nameValueCollection));
+
+            List<string> querySets = new List<string>();
+            foreach (var key in nameValueCollection.AllKeys)
+            {
+                if (string.IsNullOrEmpty(key))
+                    continue;
+
+                querySets.Add($"{WebUtility.UrlEncode(key)}={WebUtility.UrlEncode(nameValueCollection[key])}");
+            }
+
+            return (querySets != null && querySets.Count > 0)
+                ? $"?{string.Join("&", querySets)}"
+                : String.Empty;
         }
     }
 }

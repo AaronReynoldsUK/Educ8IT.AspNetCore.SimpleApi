@@ -294,6 +294,925 @@
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.AuthenticationIdentityManagerService.GetClaimsPrinciple(Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.String,System.Collections.Generic.List{System.Security.Claims.Claim})">
             <inheritdoc/>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto">
+            <summary>
+            DTO for GET operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto.#ctor(Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto.ClaimType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_ExportDto.ClaimValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_InsertDto">
+            <summary>
+            DTO for POST operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_InsertDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_InsertDto.MapToDbModel(Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_InsertDto.ClaimType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_InsertDto.ClaimValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto">
+            <summary>
+            DTO for PUT/PATCH operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto.MapToDbModel(Educ8IT.AspNetCore.SimpleApi.Identity.ApiClaim)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto.ClaimType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiClaim_UpdateDto.ClaimValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto">
+            <summary>
+            DTO for GET operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.#ctor(Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.FriendlyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.Parameters">
+            <summary>
+            Configuration Url
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.PublicInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_ExportDto.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto">
+            <summary>
+            DTO for POST operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.MapToDbModel(Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.FriendlyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.Parameters">
+            <summary>
+            Configuration Url
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.PublicInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto">
+            <summary>
+            DTO for PUT/PATCH operations
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.MapToDbModel(Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.FriendlyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.Parameters">
+            <summary>
+            Configuration Url
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.PublicInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.IdentityDbContextExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.IdentityDbContextExtensions.SearchMfa(Educ8IT.AspNetCore.SimpleApi.Identity.IdentityDbContext,System.Collections.Generic.Dictionary{System.String,System.String},Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT{Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa})">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="searchQuery"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider.SupportedMethods">
+            <summary>
+            Returns a list of the supported <see cref="T:Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod"/> methods 
+             handled by registered <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/> handlers.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider.GetHandlerAsync(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="mfaScheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider.GetHandlerAsync(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider.#ctor(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider)">
+            <summary>
+            
+            </summary>
+            <param name="schemes"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider.Schemes">
+            <summary>
+            The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider.SupportedMethods">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider.GetHandlerAsync(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandlerProvider.GetHandlerAsync(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.InitializeAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme,Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="scheme"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.HandleRequestAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.GetCurrentOTC">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.IsValidOTC(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.GetProvisionUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.GetPromptUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.Prompt(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="user"></param>
+            <param name="apiMfa"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler.Verify(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="user"></param>
+            <param name="apiMfa"></param>
+            <param name="scheme"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{`0},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="logger"></param>
+            <param name="encoder"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Scheme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Options">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.UrlEncoder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.OptionsMonitor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.InitializeAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme,Microsoft.AspNetCore.Http.HttpContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.GetCurrentOTC">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.GetPromptUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.GetProvisionUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.IsValidOTC(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Prompt(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaHandler`1.Verify(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService">
+            <summary>
+            Used to provide MFA.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.GetSchemeName(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.GetCurrentOTC(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.IsValidOTC(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.GetProvisionUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            used by apps (includes secret)
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.GetPromptUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            used by email, sms, call etc
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.Prompt(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="user"></param>
+            <param name="apiMfa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService.Verify(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="user"></param>
+            <param name="apiMfa"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder.Services" -->
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder.AddScheme``2(System.String,System.String,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod,System.Action{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TOptions"></typeparam>
+            <typeparam name="THandler"></typeparam>
+            <param name="mfaScheme"></param>
+            <param name="displayName"></param>
+            <param name="method"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider,Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions})">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="schemes"></param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddleware.Schemes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions.AddMfa(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions.AddMfa(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions})">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions.AddMfa(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions.GetMfaServiceOptions(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaMiddlewareExtensions.UseMfa(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.Schemes">
+            <summary>
+            Returns the schemes in the order they were added (important for request handling priority)
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.SchemeMap">
+            <summary>
+            Maps schemes by name.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.AddScheme(System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder})">
+            <summary>
+            Adds an <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/>.
+            </summary>
+            <param name="name">The name of the scheme being added.</param>
+            <param name="configureBuilder">Configures the scheme.</param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.AddScheme``1(System.String,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod,System.String)">
+            <summary>
+            Adds an <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/>.
+            </summary>
+            <typeparam name="THandler">The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/> responsible for the scheme.</typeparam>
+            <param name="name">The name of the scheme being added.</param>
+            <param name="method"></param>
+            <param name="displayName">The display name for the scheme.</param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions.DefaultScheme">
+            <summary>
+            Used as the default scheme if none selected by user.
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService">
+            <summary>
+            Implements <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService"/>.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.#ctor(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider,Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandlerProvider,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions})">
+            <summary>
+            
+            </summary>
+            <param name="schemes"></param>
+            <param name="handlers"></param>
+            <param name="options"></param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.Schemes">
+            <summary>
+            Used to lookup MfaSchemes.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.Handlers">
+            <summary>
+            Used to resolve IMfaHandler instances.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.Options">
+            <summary>
+            The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions"/>.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.GetSchemeName(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.GetCurrentOTC(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.IsValidOTC(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.GetProvisionUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.GetPromptUri(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.Prompt(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaService.Verify(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider">
+            <summary>
+            Responsible for managing what MfaSchemes are supported.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.GetAllSchemesAsync">
+            <summary>
+            Returns all currently registered <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/>s.
+            </summary>
+            <returns>All currently registered <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/>s.</returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.GetSchemeForMethodAsync(Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <summary>
+            
+            </summary>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.GetSchemeAsync(System.String)">
+            <summary>
+            Returns the <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/> matching the name, or null.
+            </summary>
+            <param name="name">The name of the MfaScheme.</param>
+            <returns>The scheme or null if not found.</returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.GetDefaultSchemeAsync">
+            <summary>
+            Returns the scheme that will be used by default for MFA if no preference provided
+            </summary>
+            <returns>The scheme that will be used by default for MFA if no preference provided</returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.AddScheme(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme)">
+            <summary>
+            Registers a scheme for use by <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService"/>. 
+            </summary>
+            <param name="scheme">The scheme.</param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.RemoveScheme(System.String)">
+            <summary>
+            Removes a scheme, preventing it from being used by <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService"/>.
+            </summary>
+            <param name="name">The name of the MfaScheme being removed.</param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaSchemeProvider.GetRequestHandlerSchemesAsync">
+            <summary>
+            Returns the schemes in priority order for request handling.
+            </summary>
+            <returns>The schemes in priority order for request handling</returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.GetAllSchemesAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.GetSchemeForMethodAsync(Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.GetSchemeAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.GetDefaultSchemeAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.AddScheme(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.RemoveScheme(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.GetRequestHandlerSchemesAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.#ctor(Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeProvider.#ctor(Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaOptions},System.Collections.Generic.IDictionary{System.String,Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="schemes"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaDefaults">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaDefaults.SCHEME_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaDefaults.SCHEME_DISPLAY_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaDefaults.METHOD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaExtensions.AddEmailMfa(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaExtensions.AddEmailMfa(Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaBuilder,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaOptions})">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="logger"></param>
+            <param name="encoder"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaHandler.Prompt(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaHandler.Verify(Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.EmailMfaOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme">
+            <summary>
+            MfaSchemes assign a name to a specific <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/>
+            handlerType.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme.#ctor(System.String,Educ8IT.AspNetCore.SimpleApi.Identity.EMfaMethod,System.String,System.Type)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="name">The name for the MFA scheme.</param>
+            <param name="method"></param>
+            <param name="displayName">The display name for the MFA scheme.</param>
+            <param name="handlerType">The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/> type that handles this scheme.</param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme.Name">
+            <summary>
+            The name of the MFA scheme.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme.DisplayName">
+            <summary>
+            The display name for the MFA scheme. 
+            Null is valid and used for non-user facing schemes.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme.HandlerType">
+            <summary>
+            The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/> type that handles this Scheme
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder">
+            <summary>
+            Used to build <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/>s.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="name">The name of the scheme being built.</param>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.Name">
+            <summary>
+            The name of the scheme being built.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.DisplayName">
+            <summary>
+            The display name for the scheme being built.
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.HandlerType">
+            <summary>
+            The <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaHandler"/> type responsible for this scheme.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeBuilder.Build">
+            <summary>
+            Builds the <see cref="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaScheme"/> instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeOptions.Validate">
+            <summary>
+            Check that the options are valid. Should throw an exception if things are not ok.
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.MfaSchemeOptions.Validate(System.String)">
+            <summary>
+            Checks that the options are valid for a specific scheme
+            </summary>
+            <param name="scheme">The scheme being validated.</param>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest">
             <summary>
             Authentication request
@@ -302,56 +1221,6 @@
         <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.ALLOWED_GRANT_TYPES">
             <summary>
             
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Regex_UserName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Regex_Password">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Regex_Token">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Regex_MfaCode">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Regex_Uuid">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Format_UserName">
-            <summary>
-            Pattern for a username
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Format_Password">
-            <summary>
-            Pattern for a user password
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Format_Token">
-            <summary>
-            Pattern for a username
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Format_Uuid">
-            <summary>
-            Pattern for a username
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.Format_MfaCode">
-            <summary>
-            Pattern for a username
             </summary>
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest.#ctor">
@@ -477,76 +1346,6 @@
             <param name="refreshToken"></param>
             <returns></returns>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUriBuilder.Build">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.URI_SCHEME_OTPAUTH">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_TYPE_TOTP">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_TYPE_HOTP">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_PARAM_SECRET">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_PARAM_ISSUER">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_PARAM_ALGORITHM">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_PARAM_DIGITS">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.OTP_PARAM_PERIOD">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.PATTERN_OTP_AUTH">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.#ctor(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="uriString"></param>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri.TryParse(System.String,Educ8IT.AspNetCore.SimpleApi.Authentication.OtpUri@)">
-            <summary>
-            
-            </summary>
-            <param name="uriString"></param>
-            <param name="otpUri"></param>
-            <returns></returns>
-        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationDefaults">
             <summary>
             
@@ -619,6 +1418,28 @@
             
             </summary>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions.AddBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions.AddBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions})">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <param name="authenticationScheme"></param>
+            <param name="displayName"></param>
+            <param name="configureOptions"></param>
+            <returns></returns>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler">
             <summary>
             
@@ -667,66 +1488,6 @@
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationHandler.UpdateClaimsAsync(System.Security.Claims.ClaimsPrincipal,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.Collections.Generic.List{Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken})">
             <inheritdoc/>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
-            <summary>
-            
-            </summary>
-            <param name="iLogger"></param>
-            <param name="httpContext"></param>
-            <param name="apiMapperService"></param>
-            <param name="apiMapperOptions"></param>
-            <param name="bearerAuthenticationOptions"></param>
-            <param name="identityManagerService"></param>
-            <exception cref="T:System.ArgumentNullException"></exception>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.LoginAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
-            <summary>
-            
-            </summary>
-            <param name="bearerTokenRequest"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.ReAuthenticate(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
-            <summary>
-            
-            </summary>
-            <param name="bearerTokenRequest"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.Logout(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
-            <summary>
-            
-            </summary>
-            <param name="bearerTokenRequest"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions.AddBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
-            <summary>
-            
-            </summary>
-            <param name="builder"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationExtensions.AddBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions})">
-            <summary>
-            
-            </summary>
-            <param name="builder"></param>
-            <param name="authenticationScheme"></param>
-            <param name="displayName"></param>
-            <param name="configureOptions"></param>
-            <returns></returns>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions">
             <summary>
@@ -795,10 +1556,43 @@
             <param name="name"></param>
             <param name="options"></param>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerIdentityManagerServiceOptions">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController">
             <summary>
             
             </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerAuthenticationOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
+            <summary>
+            
+            </summary>
+            <param name="iLogger"></param>
+            <param name="httpContext"></param>
+            <param name="apiMapperService"></param>
+            <param name="apiMapperOptions"></param>
+            <param name="bearerAuthenticationOptions"></param>
+            <param name="identityManagerService"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.LoginAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
+            <summary>
+            
+            </summary>
+            <param name="bearerTokenRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.ReAuthenticate(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
+            <summary>
+            
+            </summary>
+            <param name="bearerTokenRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.BearerScheme.BearerSchemeController.Logout(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
+            <summary>
+            
+            </summary>
+            <param name="bearerTokenRequest"></param>
+            <returns></returns>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.Schemes.DefaultAuthenticationDefaults">
             <summary>
@@ -898,38 +1692,6 @@
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.DefaultAuthenticationService.UpdateClaimsAsync(Microsoft.AspNetCore.Http.HttpContext,System.Security.Claims.ClaimsPrincipal)">
             <inheritdoc/>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService,Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService)">
-            <summary>
-            
-            </summary>
-            <param name="iLogger"></param>
-            <param name="httpContext"></param>
-            <param name="apiMapperService"></param>
-            <param name="apiMapperOptions"></param>
-            <param name="emailVerificationOptions"></param>
-            <param name="identityManagerService"></param>
-            <param name="emailService"></param>
-            <exception cref="T:System.ArgumentNullException"></exception>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.RequestAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
-            <summary>
-            
-            </summary>
-            <param name="bearerTokenRequest"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.VerifyAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
-            <summary>
-            
-            </summary>
-            <param name="bearerTokenRequest"></param>
-            <returns></returns>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationDefaults">
             <summary>
@@ -1130,12 +1892,44 @@
             <param name="name"></param>
             <param name="options"></param>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService,Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService)">
+            <summary>
+            
+            </summary>
+            <param name="iLogger"></param>
+            <param name="httpContext"></param>
+            <param name="apiMapperService"></param>
+            <param name="apiMapperOptions"></param>
+            <param name="emailVerificationOptions"></param>
+            <param name="identityManagerService"></param>
+            <param name="emailService"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.RequestAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
+            <summary>
+            
+            </summary>
+            <param name="bearerTokenRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.EmailVerificationScheme.EmailVerificationSchemeController.VerifyAsync(Educ8IT.AspNetCore.SimpleApi.Authentication.BearerTokenRequest)">
+            <summary>
+            
+            </summary>
+            <param name="bearerTokenRequest"></param>
+            <returns></returns>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService,Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.#ctor(Microsoft.Extensions.Logging.ILogger{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController},Microsoft.AspNetCore.Http.HttpContext,Educ8IT.AspNetCore.SimpleApi.IApiMapperService,Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.ApiMapperOptions},Microsoft.Extensions.Options.IOptions{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions},Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService,Educ8IT.AspNetCore.SimpleApi.Identity.IdentityDbContext,Educ8IT.AspNetCore.SimpleApi.Communication.IEmailService,Educ8IT.AspNetCore.SimpleApi.Authentication.Mfa.IMfaService,Educ8IT.AspNetCore.SimpleApi.EndpointContext)">
             <summary>
             
             </summary>
@@ -1145,8 +1939,56 @@
             <param name="apiMapperOptions"></param>
             <param name="mfaOptions"></param>
             <param name="identityManagerService"></param>
+            <param name="identityDbContext"></param>
             <param name="emailService"></param>
+            <param name="mfaService"></param>
+            <param name="endpointContext"></param>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.GetMfaEntry(System.Guid)">
+            <summary>
+            Permissions Required:
+            - must be owned by user
+            - or, user must have admin role
+            </summary>
+            <param name="mfaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.GetMfaEntries(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Permissions Required:
+            - must be owned by user
+            - or, user must have admin role
+            </summary>
+            <param name="searchQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.CreateMfaEntry(Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_InsertDto)">
+            <summary>
+            Permissions Required:
+            - must be owned by user
+            - or, user must have admin role
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.UpdateMfaEntry(Educ8IT.AspNetCore.SimpleApi.Authentication.Identity.DtoModel.ApiMfa_UpdateDto)">
+            <summary>
+            Permissions Required:
+            - must be owned by user
+            - or, user must have admin role
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.DeleteMfaEntry(System.Guid)">
+            <summary>
+            Permissions Required:
+            - must be owned by user
+            - or, user must have admin role
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeController.GetOptionsAsync">
             <summary>
@@ -1168,79 +2010,79 @@
             <param name="bearerTokenRequest"></param>
             <returns></returns>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.AuthorisationHeaderName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.AuthorisationHeaderName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.AuthenticationScheme">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.AuthenticationScheme">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RequestPath">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RequestPath">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.VerifyPath">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.VerifyPath">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RemovePath">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RemovePath">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RequestGrantName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RequestGrantName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RequestTokenName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RequestTokenName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RequestTokenTTL">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RequestTokenTTL">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.VerifyGrantName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.VerifyGrantName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.VerifyTokenName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.VerifyTokenName">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaDefaults.RemoveGrantName">
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeDefaults.RemoveGrantName">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaExtensions">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeExtensions">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaExtensions.AddMfa(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeExtensions.AddMfa(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
             <summary>
             
             </summary>
             <param name="builder"></param>
             <returns></returns>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaExtensions.AddMfa(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions})">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeExtensions.AddMfa(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.Action{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions})">
             <summary>
             
             </summary>
@@ -1250,12 +2092,12 @@
             <param name="configureOptions"></param>
             <returns></returns>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock,Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock,Educ8IT.AspNetCore.SimpleApi.Identity.IIdentityManagerService)">
             <summary>
             
             </summary>
@@ -1266,97 +2108,76 @@
             <param name="identityManagerService"></param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler.HandleAuthenticateAsync">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler.HandleAuthenticateAsync">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler.HandleChallengeAsync(Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler.HandleChallengeAsync(Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
             <summary>
             
             </summary>
             <param name="properties"></param>
             <returns></returns>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler.CanAuthenticateRequest(Microsoft.AspNetCore.Http.HttpContext)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler.CanAuthenticateRequest(Microsoft.AspNetCore.Http.HttpContext)">
             <inheritdoc />
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaHandler.UpdateClaimsAsync(System.Security.Claims.ClaimsPrincipal,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.Collections.Generic.List{Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken})">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeHandler.UpdateClaimsAsync(System.Security.Claims.ClaimsPrincipal,Educ8IT.AspNetCore.SimpleApi.Identity.ApiUser,System.Collections.Generic.List{Educ8IT.AspNetCore.SimpleApi.Identity.ApiUserToken})">
             <inheritdoc/>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.ClaimsHandled">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.ClaimsHandled">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.RequestPath">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.RequestPath">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.VerifyPath">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.VerifyPath">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.RemovePath">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.RemovePath">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.RequestTokenName">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.RequestTokenName">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.RequestTokenTTL">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.RequestTokenTTL">
             <summary>
             TTL for an Access Token.
             </summary>
         </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions.VerifyTokenName">
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions.VerifyTokenName">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaPostConfigureOptions">
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemePostConfigureOptions">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaPostConfigureOptions.PostConfigure(System.String,Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptions)">
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemePostConfigureOptions.PostConfigure(System.String,Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaSchemeOptions)">
             <summary>
             
             </summary>
             <param name="name"></param>
             <param name="options"></param>
-        </member>
-        <member name="T:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptionDto">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptionDto.#ctor(Educ8IT.AspNetCore.SimpleApi.Identity.ApiMfa)">
-            <summary>
-            
-            </summary>
-            <param name="dbMfa"></param>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptionDto.Method">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Educ8IT.AspNetCore.SimpleApi.Authentication.MfaScheme.MfaOptionDto.Id">
-            <summary>
-            
-            </summary>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Filters.AuthenticationFilter">
             <summary>

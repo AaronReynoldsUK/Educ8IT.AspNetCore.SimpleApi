@@ -50,5 +50,6 @@ namespace Educ8IT.AspNetCore.SimpleApi.Communication
         }
 
         // we will later add methods for attachments + image embedding
+
     }
 }

@@ -52,6 +52,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Common
             return modelName;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static string GetReadableTypeNameTextPlain(this Type type)
         {
             return type.GetReadableTypeName().Replace("&lt;", "<").Replace("&gt;", ">");

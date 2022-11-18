@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <PackageId>Educ8IT.AspNetCore.SimpleApi.Identity</PackageId>
+    <Version>0.1.4.0</Version>
+    <Authors>Aaron Reynolds</Authors>
+    <PackageDescription>Educ8IT.AspNetCore.SimpleApi.Identity</PackageDescription>
+    <RepositoryUrl>https://github.com/AaronReynoldsUK/Educ8IT.AspNetCore.SimpleApi</RepositoryUrl>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Company>Educ8IT</Company>
+    <Copyright>Aaron Reynolds 2022</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AaronReynoldsUK/Educ8IT.AspNetCore.SimpleApi</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AssemblyVersion>0.1.4.0</AssemblyVersion>
+    <FileVersion>0.1.4.0</FileVersion>
+    <DocumentationFile>Educ8IT.AspNetCore.SimpleApi.Identity.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\CustomUri.cs" />
+    <Compile Remove="Common\ICustomUri.cs" />
+    <Compile Remove="Common\MailToUri.cs" />
+    <Compile Remove="Common\MfaUri.cs" />
+    <Compile Remove="Common\MfaUriBuilder.cs" />
+    <Compile Remove="Common\OtpUri.cs" />
+    <Compile Remove="Common\OtpUriBuilder.cs" />
+    <Compile Remove="Common\SmsUri.cs" />
+    <Compile Remove="Common\TelUri.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="3.1.27" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Educ8IT.AspNetCore.SimpleApi.Identity.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DtoModel\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,2 @@
+﻿# Add Migrations to Educ8IT.AspNetCore.SimpleApi.Identity
+Add-Migration Initial -Project Educ8IT.AspNetCore.SimpleApi.Identity

@@ -18,6 +18,11 @@
         <member name="P:Educ8IT.AspNetCore.SimpleApi.ActionResults.ActionResult.ResultType">
             <inheritdoc/>
         </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.ActionResults.ActionResult.Success">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.ActionResults.ActionResult.#ctor(System.Net.HttpStatusCode,System.Object)">
             <summary>
             Default Constructor.
@@ -1436,6 +1441,30 @@
             <param name="list"></param>
             <param name="entry"></param>
         </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions.HasKey(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nameValueCollection"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions.GetValue(System.Collections.Specialized.NameValueCollection,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="nameValueCollection"></param>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.CollectionExtensions.ToQueryString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="nameValueCollection"></param>
+            <returns></returns>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Concatenation">
             <summary>
             
@@ -1647,6 +1676,21 @@
             Currency string
             </summary>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.ESearchOrderDirection">
+            <summary>
+            DB Search ordering
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.ESearchOrderDirection.Ascending">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.ESearchOrderDirection.Descending">
+            <summary>
+            Descending
+            </summary>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.FileOperations">
             <summary>
             Common File Operations
@@ -1739,6 +1783,161 @@
             <param name="collectionName"></param>
             <returns></returns>
         </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Patterns">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_IP_ADDRESS_V4_BYTE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_IP_ADDRESS_V4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_IP_ADDRESS_V4_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_PROTOCOL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_SCHEME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_DOMAIN_LABEL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_DOMAIN_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_ENCODED_CHARS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_AUTH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_PATH_SEGMENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_PATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_QUERY_PARAM_SET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_QUERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL_FRAGMENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_EMAIL_ADDRESS_USER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_EMAIL_ADDRESS_HOST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_EMAIL_ADDRESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_EMAIL_ADDRESS_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_DISPLAY_NAME_CHARS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_DISPLAY_NAME_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_USERNAME_CHARS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_USERNAME_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_PASSWORD_CHARS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_PASSWORD_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_TOKEN_CHARS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_TOKEN_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_TOTP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.Patterns.PATTERN_UUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.QueryableExtensions">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.EasyDictionary">
             <summary>
             Allows simple Dictionary setup from an anonymous object of KVP
@@ -1749,6 +1948,176 @@
             Default Constructor
             </summary>
             <param name="values"></param>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.PageNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.GetPageSize32">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.PageCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.RecordCount">
+            <summary>
+            The count of records available from the operation
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.OrderByFieldName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.OrderByDirection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.GetRecordsToSkip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.GetRecordsToSkip32">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.UpdateFromData">
+            <summary>
+            Update counts using the data
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT`1.FromQueryDescription(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfTExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfTExtensions.UpdateRecordCount``1(Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT{``0},System.Linq.IQueryable{``0},LinqKit.ExpressionStarter{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="result"></param>
+            <param name="queryable"></param>
+            <param name="expression"></param>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfTExtensions.PerformUnorderedQuery``1(Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT{``0},System.Linq.IQueryable{``0},LinqKit.ExpressionStarter{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="result"></param>
+            <param name="queryable"></param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfTExtensions.PerformOrderedQuery``1(Educ8IT.AspNetCore.SimpleApi.Common.QueryResultOfT{``0},System.Linq.IQueryable{``0},LinqKit.ExpressionStarter{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="result"></param>
+            <param name="queryable"></param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_IP_ADDRESS_V4">
+            <summary>
+            IP Address (v4) regular expression
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_URL">
+            <summary>
+            URL regular expression
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_EMAIL_ADDRESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_DISPLAY_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_USERNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_PASSWORD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_TOKEN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_TOTP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Educ8IT.AspNetCore.SimpleApi.Common.RegularExpressions.REGEX_UUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.ResultOfListOfT`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.ResultOfListOfT`1.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.ResultOfListOfT`1.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Educ8IT.AspNetCore.SimpleApi.Common.ResultOfListOfT`1.Success">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:Educ8IT.AspNetCore.SimpleApi.Common.Serialisation">
             <summary>
@@ -1893,6 +2262,13 @@
             </summary>
             <param name="type">A CLR type</param>
             <returns>The type name</returns>
+        </member>
+        <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.TypeExtensions.GetReadableTypeNameTextPlain(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
         </member>
         <member name="M:Educ8IT.AspNetCore.SimpleApi.Common.TypeExtensions.IsNullable(System.Type)">
             <summary>

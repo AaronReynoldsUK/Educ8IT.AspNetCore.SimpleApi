@@ -2,6 +2,7 @@
 
 using Educ8IT.AspNetCore.SimpleApi.ApiMapping;
 using Educ8IT.AspNetCore.SimpleApi.Attributes;
+using Educ8IT.AspNetCore.SimpleApi.Common;
 using Educ8IT.AspNetCore.SimpleApi.Dto;
 using Educ8IT.AspNetCore.SimpleApi.Models;
 using Newtonsoft.Json;
@@ -27,6 +28,10 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
             "password",
             "refresh_token",
 
+            "bearer.access.request",
+            "bearer.access.refresh",
+            "bearer.access.remove",
+
             "email.verification.request",
             "email.verification.verify",
             "email.verification.remove",
@@ -35,56 +40,6 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
             "mfa.verification.verify",
             "mfa.verification.remove"
         };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static Regex Regex_UserName = new Regex($"^{Format_UserName}$");
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static Regex Regex_Password = new Regex($"^{Format_Password}$");
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static Regex Regex_Token = new Regex($"^{Format_Token}$");
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static Regex Regex_MfaCode = new Regex($"^{Format_MfaCode}$");
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static Regex Regex_Uuid = new Regex($"^{Format_Uuid}$");
-
-        /// <summary>
-        /// Pattern for a username
-        /// </summary>
-        public const string Format_UserName = @"[\w\.\@]{3,100}";
-
-        /// <summary>
-        /// Pattern for a user password
-        /// </summary>
-        public const string Format_Password = @"[\w\|\,\.\<\>\/\\\?\;\:\'\@\#\~\[\]\{\}\`\!\£\$\%\^\&\*\(\)\-\=\+]{8,100}";
-
-        /// <summary>
-        /// Pattern for a username
-        /// </summary>
-        public const string Format_Token = @"[A-Za-z0-9\+\/\=]{16,1000}";
-
-        /// <summary>
-        /// Pattern for a username
-        /// </summary>
-        public const string Format_Uuid = @"[a-fA-F0-9\-]{32,36}";
-
-        /// <summary>
-        /// Pattern for a username
-        /// </summary>
-        public const string Format_MfaCode = @"[0-9]{6,12}";
 
         #endregion
 
@@ -110,7 +65,7 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
 
         #endregion
 
-        #region Properties for GrantType = "password"
+        #region Properties for GrantType = "password" | "bearer.access.request"
 
         /// <summary>
         /// 
@@ -120,13 +75,17 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
 
         #endregion
 
-        #region Properties for GrantType = "refresh_token"
+        #region Properties for GrantType = "refresh_token" | "bearer.access.refresh"
 
         /// <summary>
         /// 
         /// </summary>
         [PropertyAlias("refresh_token")]
         public string RefreshToken { get; set; }
+
+        #endregion
+
+        #region Properties for GrantType = "bearer.access.remove"
 
         #endregion
 
@@ -179,9 +138,11 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
             switch (GrantType)
             {
                 case "password":
+                case "bearer.access.request":
                     ValidateFor_Password(topLevelObject);
                     break;
                 case "refresh_token":
+                case "bearer.access.refresh":
                     ValidateFor_RefreshToken(topLevelObject);
                     break;
 
@@ -210,93 +171,71 @@ namespace Educ8IT.AspNetCore.SimpleApi.Authentication
 
         private void ValidateFor_Password<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!Password.IsValid(Regex_Password, false))
-            {
+
+            if (String.IsNullOrEmpty(Password) || !Password.IsValid(RegularExpressions.REGEX_PASSWORD, false))
                 topLevelObject.AddValidationItem(nameof(Password), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_RefreshToken<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!RefreshToken.IsValid(Regex_Token, false))
-            {
+
+            if (String.IsNullOrEmpty(RefreshToken) || !RefreshToken.IsValid(RegularExpressions.REGEX_TOKEN, false))
                 topLevelObject.AddValidationItem(nameof(RefreshToken), $"Missing or Invalid");
-            }
         }
+
         private void ValidateFor_EmailConfirmationRequest<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_EmailConfirmationVerify<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!ConfirmationToken.IsValid(Regex_Token, false))
-            {
+
+            if (String.IsNullOrEmpty(ConfirmationToken) || !ConfirmationToken.IsValid(RegularExpressions.REGEX_TOTP, false))
                 topLevelObject.AddValidationItem(nameof(ConfirmationToken), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_EmailConfirmationRemove<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_MfaRequest<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!MfaMethodId.IsValid(Regex_Uuid, false))
-            {
+
+            if (String.IsNullOrEmpty(MfaMethodId) || !MfaMethodId.IsValid(RegularExpressions.REGEX_UUID, false))
                 topLevelObject.AddValidationItem(nameof(MfaMethodId), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_MfaVerify<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!MfaMethodId.IsValid(Regex_Uuid, false))
-            {
+
+            if (String.IsNullOrEmpty(MfaMethodId) || !MfaMethodId.IsValid(RegularExpressions.REGEX_UUID, false))
                 topLevelObject.AddValidationItem(nameof(MfaMethodId), $"Missing or Invalid");
-            }
-            if (!MfaCode.IsValid(Regex_MfaCode, false))
-            {
+
+            if (String.IsNullOrEmpty(MfaCode) || !MfaCode.IsValid(RegularExpressions.REGEX_TOTP, false))
                 topLevelObject.AddValidationItem(nameof(MfaCode), $"Missing or Invalid");
-            }
         }
 
         private void ValidateFor_MfaRemove<T>(T topLevelObject) where T : ValidationBaseDto
         {
-            if (!UserName.IsValid(Regex_UserName, false))
-            {
+            if (String.IsNullOrEmpty(UserName) || !UserName.IsValid(RegularExpressions.REGEX_USERNAME, false))
                 topLevelObject.AddValidationItem(nameof(UserName), $"Missing or Invalid");
-            }
-            if (!MfaMethodId.IsValid(Regex_Uuid, false))
-            {
+
+            if (String.IsNullOrEmpty(MfaMethodId) || !MfaMethodId.IsValid(RegularExpressions.REGEX_UUID, false))
                 topLevelObject.AddValidationItem(nameof(MfaMethodId), $"Missing or Invalid");
-            }
         }
 
         #endregion

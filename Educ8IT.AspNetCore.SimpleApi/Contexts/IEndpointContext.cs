@@ -104,6 +104,7 @@ namespace Educ8IT.AspNetCore.SimpleApi
         /// <returns>A formatted/serialised response to return to the client</returns>
         public async Task<ResponseObject> FormatResponseAsync()
         {
+            await Task.CompletedTask;
             throw new NotImplementedException();
         }
     }

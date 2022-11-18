@@ -27,6 +27,14 @@ namespace Educ8IT.AspNetCore.SimpleApi.ActionResults
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool Success
+        {
+            get { return ((int)StatusCode).ToString().StartsWith("2"); }
+        }
+
+        /// <summary>
         /// Default Constructor.
         /// Create a generic <see cref="ActionResult"/>
         /// </summary>

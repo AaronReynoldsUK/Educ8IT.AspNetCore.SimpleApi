@@ -1,6 +1,8 @@
 ﻿using Educ8IT.AspNetCore.SimpleApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Educ8IT.AspNetCore.SimpleApi.Dto
 {
